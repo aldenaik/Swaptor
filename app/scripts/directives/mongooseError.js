@@ -15,4 +15,18 @@ angular.module('swaptorApp')
         });
       }
     };
-  });
+  })
+
+.directive('sdMixItUp', function (){
+        return{
+            restrict: 'A',
+            link: function(scope, element, attrs){
+                var unwatch = scope.$watch(attrs.sdMixItUp, function(val) {
+                    if (val) {
+                        element.mixItUp();
+                        unwatch();
+                    }
+                });
+            }
+        };
+    });
