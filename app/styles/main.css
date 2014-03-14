@@ -65,7 +65,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     height:101%;
     width: 100%;
-    display: none;
+    /*display: none;*/
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -74,11 +74,13 @@ body {
     top: 0;
 
 }
+.dim.hidden{
+    max-height: 0;
+}
 .boxExpand{
     height:575px;
     width: 850px;
     background-color: white ;
-    display: none;
     border: 4px solid gray;
     position: absolute;
     margin-left: auto;
@@ -86,7 +88,9 @@ body {
     left: 0;
     right: 0;
     top: 14.5%;
-
+}
+.boxExpand.hidden{
+    max-height: 0;
 }
 h1{
     border-bottom: 2px solid gray;
@@ -97,32 +101,17 @@ h1{
 .description{
     width:45%;
     border-right: 2px solid gray;
-
     float: left;
     padding-left: 2%;
     padding-top: 1%;
-
     height: 320px;
+    overflow: scroll;
 }
 .close{
    margin-right: 2%;
     margin-top: 0%;
-
-
-
 }
 
-.ipadExpand{
-    float: left;
-    height:326px;
-    width: 444px;
-    background-image:url('/images/sample/ipad.jpg');
-    background-repeat: no-repeat;
-    background-size:90%;
-    float: left;
-    display: none;
-    background-position: 50% 50%;
-}
 .tradeInfo{
     float: left;
     border-top: 2px solid gray;
@@ -179,7 +168,7 @@ h1{
     overflow: hidden;
 
 }
-.hat{
+.previewImages{
     height: 80px;
     margin-left: 5%;
 
@@ -191,6 +180,10 @@ h1{
     margin-top: 1%;
     border: 1px solid gray;
     float: left;
+    overflow: hidden;
+}
+.currentItem{
+    height: 68px;
 }
 .email{
     margin-top: 2%;
@@ -206,51 +199,25 @@ h1{
     border: 3px solid black;
     overflow: hidden;
 
-
 }
-.ipadimage{
+.previewImage{
     height: 199px;
-    margin-left: -20%;
+    margin-right: -10%;
+    float: right;
+}
+.fullSizeImageHolder{
+    height: 309px;
+    border: 3px solid gray;
+    width: 418px;
+    overflow: hidden;
+    float: right;
+    margin-right: 3%;
 
-
 }
-#cafeRacer{
-    background-image:url('/images/sample/caferacer.jpg');
-    background-repeat: no-repeat;
-    background-size:150%;
-    background-position: 50% 50%;
+.fullSizeImage{
+    height: 309px;
+    /*margin-left: 10%;*/
 }
-#bike{
-    background-image:url('/images/sample/bike.jpg');
-    background-repeat: no-repeat;
-    background-size:150%;
-    background-position: 50% 50%;
-}
-#laptop{
-    background-image:url('/images/sample/laptop.jpg');
-    background-repeat: no-repeat;
-    background-size:151%;
-    background-position: 50% 50%;
-}
-#dresser{
-    background-image:url('/images/sample/dresser.jpg');
-    background-repeat: no-repeat;
-    background-size:100%;
-    background-position: 50% 50%;
-}
-#backpack{
-    background-image:url('/images/sample/backpack.jpg');
-    background-repeat: no-repeat;
-    background-size:110%;
-    background-position: 50% 50%;
-}
-#bed{
-    background-image:url('/images/sample/bed.jpg');
-    background-repeat: no-repeat;
-    background-size:100%;
-    background-position: 50% 50%;
-}
-
 
 
 

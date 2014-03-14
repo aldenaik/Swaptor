@@ -7,38 +7,25 @@ angular.module('swaptorApp')
       'AngularJS',
       'Karma'
     ];
-        $http.get('/api/images').success(function(response) {
+        $http.get('/api/items').success(function(response) {
             $scope.tradingItems = response.tradingItems;
         });
 
-        // On document ready:
-
-
-
-
-    $(function(){
-
-    // Instantiate MixItUp:
-
- //
-
-
-        $( "#ipad" ).click(function() {
-            $( '.dim,.boxExpand,.ipadExpand' ).animate({
-                height: "show"
-            }, 300, function() {
-                // Animation complete.
-            });
-
-        });
-        $( ".close" ).click(function() {
-            $( '.dim,.boxExpand,.ipadExpand' ).animate({
-                height: "hide"
-            }, 300, function() {
-                // Animation complete.
-                });
-
+        $http.get('/api/useroneitems').success(function(response) {
+            $scope.onesitems = response.onesitems;
         });
 
-     });
+
+        $scope.selectItem= function(oneItem){
+            console.log(oneItem);
+            $scope.currentItem = oneItem;
+//                $scope.select = $scope.currentItem;
+        };
+
+        $scope.selectItem= function(oneItem){
+            console.log(oneItem);
+            $scope.currentItem = oneItem;
+//                $scope.select = $scope.currentItem;
+        };
+
  });//////end of controller
