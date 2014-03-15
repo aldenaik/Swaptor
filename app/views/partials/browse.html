@@ -6,7 +6,7 @@
         <div class="filter" data-filter=".electronics">Electronics</div>
         <div class="filter" data-filter=".bikes">Bikes</div>
         <div class="filter" data-filter=".furniture">Furniture</div>
-        <div class="filter" data-filter=".accessories">Accesories</div>
+        <div class="filter" data-filter=".clothing">Clothing</div>
 
     </div>
 
@@ -14,11 +14,7 @@
         <!--<img src={{images.image}}>-->
         <div id="Container" sd-mix-it-up="tradingItems">
 
-
-
 <!--<button ng-click="openItem = ! openItem"></button>-->
-
-
 
             <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingItems">
                 <img src="{{item.image}}" class="previewImage"ng-click="openItem = ! openItem">
@@ -37,28 +33,32 @@
                                 <img src="{{item.image}}"class="fullSizeImage">
                             </div>
                             <div class="tradeInfo">
-                                <div class="infoTitle">Any additional information</div>
-                                <div class="selectTitle">Select Item to trade</div>
-                                <div class="myItems">
 
+                                <div class="myItems"ng-click="open = ! open">
                                     <div class="items" ng-repeat="oneItem in onesitems" >
                                         <img src="{{oneItem.image}}"class="previewImages"ng-click="selectItem(oneItem)">
                                     </div>
 
+                                </div>
 
+                                <div class="instructions">
+                                    Click an item to the left to select an item to swap.
                                 </div>
-                                <textarea class="response"></textarea>
-                                <div class="preview">
-                                    <img src="{{currentItem.image}}"class="currentItem">
+
+                                <div class="response">
+                                    <div class="previewEmail"></div>
+                                    <div class="userResponseBox">
+                                        <textarea class="userResponse" ng-show="open">Hey Swapper! I am interested in swapping your {{item.name}} for my {{currentItem.name}}. Here is my description; {{currentItem.description}}</textarea>
+                                    </div>
+                                        <div class="preview">
+                                            <img src="{{currentItem.image}}"class="currentItem">
+                                        </div>
+
+                                        <button class="email" ng-mouseup="openItem = ! openItem"ng-mousedown="email()">email</button>
                                 </div>
-                                <button class="email" ng-click="email()">message</button>
                             </div>
-
                         </div>
                     </div>
-
-
-
 
             </div>
 
@@ -72,25 +72,3 @@
 
 
 </body>
-
-
-<!--<div class="mix furniture" id="dresser" data-myorder="1"></div>-->
-<!--<div class="mix bikes" id="bike" data-myorder="4"></div>-->
-<!--<div class="mix bikes" id="cafeRacer" data-myorder="8"></div>-->
-<!--<div class="mix furniture" id="bed" data-myorder="1"></div>-->
-<!--<div class="mix electronics" id="laptop" data-myorder="1"></div>-->
-<!--<div class="mix electronics" id="ipad" data-myorder="2"></div>-->
-
-<!--<div class="mix bikes" id="cafeRacer" data-myorder="8"></div>-->
-<!--<div class="mix accessories" id="backpack" data-myorder="8"></div>-->
-<!--<div class="mix bikes" id="bike" data-myorder="4"></div>-->
-<!--<div class="mix accessories" id="backpack" data-myorder="8"></div>-->
-<!--<div class="mix bikes" id="cafeRacer" data-myorder="8"></div>-->
-<!--<div class="mix bikes" id="bike" data-myorder="4"></div>-->
-<!--<div class="mix furniture" id="dresser" data-myorder="1"></div>-->
-<!--<div class="mix furniture" id="bed" data-myorder="1"></div>-->
-<!--<div class="mix electronics" id="ipad" data-myorder="2"></div>-->
-<!--<div class="mix electronics" id="laptop" data-myorder="1"></div>-->
-<!--<div class="mix accessories" id="backpack" data-myorder="8"></div>-->
-<!--<div class="mix bikes" id="cafeRacer" data-myorder="8"></div>-->
-<!--<div class="mix electronics" id="laptop" data-myorder="1"></div>-->

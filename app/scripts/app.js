@@ -30,6 +30,11 @@ angular.module('swaptorApp', [
             controller: 'BrowseCtrl',
             authenticate: false
         })
+        .when('/profile', {
+            templateUrl: 'partials/profile',
+            controller: 'ProfileCtrl',
+            authenticate: false
+        })
       .otherwise({
         redirectTo: '/'
       });

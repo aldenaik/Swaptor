@@ -22,7 +22,7 @@ body {
 
 }
 .background{
-    background-image:url('/images/background.jpeg');
+    background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpeg');
     background-repeat: no-repeat;
     background-size:100%;
     /*background-position: 50% 50%;*/
@@ -78,8 +78,8 @@ body {
     max-height: 0;
 }
 .boxExpand{
-    height:575px;
-    width: 850px;
+    height:635px;
+    width: 950px;
     background-color: white ;
     border: 4px solid gray;
     position: absolute;
@@ -87,7 +87,7 @@ body {
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 14.5%;
+    top: 6%;
 }
 .boxExpand.hidden{
     max-height: 0;
@@ -108,7 +108,7 @@ h1{
     overflow: scroll;
 }
 .close{
-   margin-right: 2%;
+   margin-right: 3.5%;
     margin-top: 0%;
 }
 
@@ -137,25 +137,51 @@ h1{
 
 }
 .myItems{
-    width: 320px;
-    height:130px;
+    width: 200px;
+    height:119%;
     border: 1px solid gray;
     background-color: lightgray;
     overflow: scroll;
     float: left;
-    margin-top: 10px;
 
 }
 
 .response{
     float: left;
-    width: 320px;
-    height: 130px;
+    width: 75%;
+    height: 106%;
     margin-left: 20px;
-    margin-top: 10px;
+    border: 1px solid gray;
+    margin-top: 1%;
+    background-color: lightgray;
+
+}
+.userResponse{
+    width: 100%;
+    height: 100%;
     font-size: 1em;
     overflow: scroll;
     resize: none;
+    overflow: scroll;
+    /*display: none;*/
+}
+/*.userResponse.hidden{*/
+    /*max-height: 50px;*/
+/*}*/
+.userResponseBox{
+    float: left;
+    width: 71%;
+    height: 86%;
+    background-color: white;
+    border: 1px solid gray;
+    margin-left: 2%;
+    font-size: 1em;
+    overflow: scroll;
+    resize: none;
+    overflow: scroll;
+}
+.previewEmail{
+    padding: 1%;
 }
 .items{
     float: left;
@@ -173,21 +199,22 @@ h1{
     margin-left: 5%;
 
 }
+
 .preview{
-    height: 70px;
-    width: 70px;
-    margin-left: 5%;
-    margin-top: 1%;
+    height: 110px;
+    width: 22%;
+    margin-left: 3%;
     border: 1px solid gray;
     float: left;
     overflow: hidden;
+    background-color: white;
 }
 .currentItem{
-    height: 68px;
+    width: 100%;
 }
 .email{
     margin-top: 2%;
-    margin-left: 4%;
+    margin-left: 3%;
     width: 90px;
     height: 45px;
     font-size: 1.4em;
@@ -218,11 +245,59 @@ h1{
     height: 309px;
     /*margin-left: 10%;*/
 }
+.instructions{
+float: left;
+padding-left: 2%;
+    font-size: 1.1em;
+}
+.loginBox{
+    background-color: white;
+    width: 60%;
+    height:65%;
+    float: left;
+    margin-left: 19%;
+    margin-top: 6%;
+    border: 3px solid black;
+}
+.pSpacing{
+    padding-left:2%;
+    padding-right:2%;
 
+}
 
+.spacing{
+    padding:2%;
+    /*padding-bottom:0%;*/
 
+}
+.profileBox{
+    background-color: white;
+    width: 90%;
+    height:90%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 2%;
+    border: 3px solid gray;
+}
+.add{
+    width: 60%;
+    height: 91%;
+    margin-top:4.5% ;
+    /*background-color: red;*/
+    border-right: 3px solid gray;
+}
+.infoRow{
+    padding-bottom: 5%;
+    float: right;
+    width: 100%;
+    text-align: right;
+}
+.titleClass{
+    width: 30%;
+    font-size: 1.5em;
+}
 
-////////////////////////// Bootstrap CSS///////////////
+/*////////////////////////// Bootstrap CSS///////////////*/
 /* Everything but the jumbotron gets side spacing for mobile first views */
 /*.header,*/
 .marketing,
