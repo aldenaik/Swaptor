@@ -32,7 +32,7 @@ angular.module('swaptorApp', [
         })
         .when('/profile', {
             templateUrl: 'partials/profile',
-            controller: 'ProfileCtrl',
+            controller: 'BrowseCtrl',
             authenticate: false
         })
       .otherwise({

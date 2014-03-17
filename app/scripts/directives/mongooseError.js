@@ -17,6 +17,7 @@ angular.module('swaptorApp')
     };
   })
 
+
 .directive('sdMixItUp', function (){
         return{
             restrict: 'A',

@@ -281,10 +281,10 @@ padding-left: 2%;
 }
 .add{
     width: 60%;
-    height: 91%;
-    margin-top:4.5% ;
+    height: 87%;
     /*background-color: red;*/
     border-right: 3px solid gray;
+    float: left;
 }
 .infoRow{
     padding-bottom: 5%;
@@ -296,6 +296,44 @@ padding-left: 2%;
     width: 30%;
     font-size: 1.5em;
 }
+.edit{
+width: 37%;
+    height: 59%;
+    float: right;
+    margin-right:1.5%;
+    border: 3px solid gray;
+    overflow: scroll;
+}
+.editHolder{
+    width: 29%;
+    height: 38%;
+    border: 2px solid gray;
+    float: left;
+overflow: hidden;
+    margin:2%;
+}
+.editImages{
+    height: 100%;
+}
+.deleteBox{
+    border: 3px solid gray;
+    float: right;
+    width: 37%;
+    height: 25%;
+    margin-right:1.5%;
+    margin-top: 1.5%;
+    padding: 1.5%;
+}
+#delete{
+    margin-top: 3%;
+    float: right;
+}
+/*.editBox{*/
+    /*width: 80px;*/
+    /*height: 80px;*/
+    /*border: 1px solid gray;*/
+    /*float: right;*/
+/*}*/
 
 /*////////////////////////// Bootstrap CSS///////////////*/
 /* Everything but the jumbotron gets side spacing for mobile first views */

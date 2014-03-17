@@ -3,31 +3,9 @@
 var express = require('express'),
     path = require('path'),
     fs = require('fs'),
-    mongoose = require('mongoose');
-
-/**
- * Main application file
-// */
-
-//This is Ruby
-
-//S3_BUCKET_NAME = 'CREATE_A_BUCKET_AND_SET_THE_NAME_HERE'
-//S3_SECRET_KEY = 'GET_THIS_IN_AWS_CONSOLE'
-//S3_ACCESS_KEY = 'GET_THIS_IN_AWS_CONSOLE'
-//
-//get '/signS3put' do
-//    objectName = params[:s3_object_name]
-//mimeType = params['s3_object_type']
-//expires = Time.now.to_i + 100 # PUT request to S3 must start within 100 seconds
-//
-//amzHeaders = "x-amz-acl:public-read" # set the public read permission on the uploaded file
-//stringToSign = "PUT\n\n#{mimeType}\n#{expires}\n#{amzHeaders}\n/#{S3_BUCKET_NAME}/#{objectName}";
-//sig = CGI::escape(Base64.strict_encode64(OpenSSL::HMAC.digest('sha1', S3_SECRET_KEY, stringToSign)))
-//
-//{
-//    signed_request: CGI::escape("#{S3_URL}#{S3_BUCKET_NAME}/#{objectName}?AWSAccessKeyId=#{S3_ACCESS_KEY}&Expires=#{expires}&Signature=#{sig}"),
-//        url: "http://s3.amazonaws.com/#{S3_BUCKET_NAME}/#{objectName}"
-//}.to_json
+    mongoose = require('mongoose'),
+    AWS = require('aws-sdk'),
+    fs = require('fs');
 
 
 

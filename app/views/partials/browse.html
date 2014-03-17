@@ -34,7 +34,7 @@
                             </div>
                             <div class="tradeInfo">
 
-                                <div class="myItems"ng-click="open = ! open">
+                                <div class="myItems">
                                     <div class="items" ng-repeat="oneItem in onesitems" >
                                         <img src="{{oneItem.image}}"class="previewImages"ng-click="selectItem(oneItem)">
                                     </div>
@@ -48,7 +48,8 @@
                                 <div class="response">
                                     <div class="previewEmail"></div>
                                     <div class="userResponseBox">
-                                        <textarea class="userResponse" ng-show="open">Hey Swapper! I am interested in swapping your {{item.name}} for my {{currentItem.name}}. Here is my description; {{currentItem.description}}</textarea>
+
+                                        <textarea class="userResponse"> {{testEmail}}</textarea>
                                     </div>
                                         <div class="preview">
                                             <img src="{{currentItem.image}}"class="currentItem">
