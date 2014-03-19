@@ -1,4 +1,3 @@
-////////////////////////// My CSS///////////////
 
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
@@ -6,7 +5,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 body {
     /*background-image: url(https://abs.twimg.com/images/themes/theme9/bg.gif);*/
     /*background-repeat: no-repeat;*/
-    margin: s0%;
+    margin: 0%;
     background-color: black;
     font-family: "Helvetica Neue",Arial,sans-serif;
     height:100%;
@@ -14,12 +13,16 @@ body {
 
 
 .header {
-    background-color: lightgray;
+    background-color: black;
     width:100%;
     height:55px;
-    border: 2px solid lightgray;
+    border-bottom: 1px solid #3c3c3c;
     padding-left: 10px;
-
+}
+.title{
+    color: darkred;
+    font-size: 1.2em;
+    padding-top:2% ;
 }
 .background{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpeg');
@@ -30,7 +33,8 @@ body {
     height: 625px;
 }
 .menu {
-    background-color: gray;
+    background-color: black;
+    border-bottom: 1px solid #3c3c3c;
     width:95%;
     margin-left:2.5%;
 
@@ -38,10 +42,15 @@ body {
 }
 #Container .mix{
     display: none;
-    margin-left: 20px;
+    margin: .7%;
+
+}
+.resultsBackground{
+    background-color: black;
+    text-align: center;
 }
 .filter{
-    background-color: tan;
+    background-color: #3c3c3c;
     width: 120px;
     height: 40px;
     float: left;
@@ -50,10 +59,16 @@ body {
     font-size: 1.2em;
     text-align: center;
     cursor: pointer;
+    color: gray;
+}
+.filter.active{
+
+    color: darkred;
+    /*background-color: gray;*/
 }
 
 .main {
-    background-color: white;
+    background-color: black;
     width:95%;
     height:575px;
     margin-left:2.5%;
@@ -98,6 +113,11 @@ h1{
     padding-left: 2%;
 
 }
+h4{
+    font-size: 1.3em;
+    font-weight:500;
+    margin-bottom: 2%;
+}
 .description{
     width:45%;
     border-right: 2px solid gray;
@@ -106,6 +126,8 @@ h1{
     padding-top: 1%;
     height: 320px;
     overflow: scroll;
+    text-align: left;
+
 }
 .close{
    margin-right: 3.5%;
@@ -170,7 +192,7 @@ h1{
 /*}*/
 .userResponseBox{
     float: left;
-    width: 71%;
+    width: 66%;
     height: 86%;
     background-color: white;
     border: 1px solid gray;
@@ -186,7 +208,7 @@ h1{
 .items{
     float: left;
     width:80px;
-    height: 80px;
+    height: auto;
     border: 1px solid gray;
     background-color: white;
     margin-left: 6%;
@@ -195,42 +217,43 @@ h1{
 
 }
 .previewImages{
-    height: 80px;
-    margin-left: 5%;
+    width: 100%;
+    vertical-align: top;
 
 }
 
 .preview{
-    height: 110px;
-    width: 22%;
-    margin-left: 3%;
+    height: 56%;
+    margin-left: 2%;
     border: 1px solid gray;
     float: left;
     overflow: hidden;
     background-color: white;
 }
 .currentItem{
-    width: 100%;
+    height: 100%;
 }
 .email{
     margin-top: 2%;
-    margin-left: 3%;
+    margin-right: 10%;
     width: 90px;
     height: 45px;
     font-size: 1.4em;
+    float: right;
 }
 .mix{
-    width: 205px;
-    height: 205px;
-    margin: 1%;
-    border: 3px solid black;
-    overflow: hidden;
-
+    height: 200px;
+    border: 4px solid #3c3c3c;
+    /*vertical-align: top;*/
+    display: inline;
 }
 .previewImage{
-    height: 199px;
-    margin-right: -10%;
+    height: 100%;
     float: right;
+}
+.name{
+    text-align: left;
+    margin-top: 2%;
 }
 .fullSizeImageHolder{
     height: 309px;
@@ -306,14 +329,14 @@ width: 37%;
 }
 .editHolder{
     width: 29%;
-    height: 38%;
     border: 2px solid gray;
     float: left;
 overflow: hidden;
     margin:2%;
 }
 .editImages{
-    height: 100%;
+    width: 100%;
+    vertical-align: top;
 }
 .deleteBox{
     border: 3px solid gray;
