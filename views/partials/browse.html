@@ -1,0 +1,84 @@
+<body>
+    <div ng-include="'partials/navbar'"></div>
+
+    <div class="menu">
+        <div class="filter" data-filter=".all">Show All</div>
+        <div class="filter" data-filter=".electronics">Electronics</div>
+        <div class="filter" data-filter=".bikes">Bikes</div>
+        <div class="filter" data-filter=".furniture">Furniture</div>
+        <div class="filter" data-filter=".clothing">Clothing</div>
+
+    </div>
+
+    <div class="main">
+        <!--<img src={{images.image}}>-->
+        <div id="Container" sd-mix-it-up="tradingItems">
+
+<!--<button ng-click="openItem = ! openItem"></button>-->
+
+           <div class="resultsBackground">
+
+                <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingItems">
+                    <img src="{{item.image}}" class="previewImage" ng-click="openItem = ! openItem">
+                        <div class="dim" ng-class="{ 'hidden': ! openItem }">
+                            <div class="boxExpand">
+                                <h1 class="name">{{item.name}}
+                                    <input type="button" value="Finished Looking" ng-click="openItem = ! openItem" class="close">
+                                </h1>
+
+                                <div class="description">
+                                    <hr>
+
+                                    <h4>Description of item</h4>
+                                        {{item.description}}
+                                    <hr>
+
+                                    <h4>What i am looking for</h4>
+                                    {{item.want}}
+                                    <hr>
+
+                                </div>
+                                <div class="fullSizeImageHolder">
+                                    <img src="{{item.image}}" class="fullSizeImage">
+                                </div>
+                                <div class="tradeInfo">
+
+                                    <div class="myItems">
+                                        <div class="items" ng-repeat="oneItem in onesitems">
+                                            <img src="{{oneItem.image}}" class="previewImages" ng-click="selectItem(oneItem)">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="instructions">
+                                        Click an item to the left to select an item to swap.
+                                    </div>
+
+                                    <div class="response">
+                                        <div class="previewEmail"></div>
+                                        <div class="userResponseBox">
+
+                                            <textarea class="userResponse"> {{testEmail}}</textarea>
+                                        </div>
+                                            <div class="preview">
+                                                <img src="{{currentItem.image}}" class="currentItem">
+                                            </div>
+
+                                            <button class="email" ng-mouseup="openItem = ! openItem" ng-mousedown="email()">email</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+           </div>
+
+
+
+        </div>
+
+    </div>
+
+
+
+</body>
