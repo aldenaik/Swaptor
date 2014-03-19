@@ -10,27 +10,36 @@
                 <div class="spacing">
                     <form action="/api/pictures" method="post" enctype="multipart/form-data">
 
+                        <div class="form-group">
                             <label>Title of Item</label>
                             <input type="text" name="title" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label>Description</label>
                             <input type="text" name="description" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label>What are you willing to swap for it?</label>
                             <input type="text" name="willingToTrade" class="form-control">
+                        </div>
+                        <div class="form-group">
                             <label>What category does it fall under?</label> (Electronics, Bikes, Furniture, Clothing)
                             <input type="text" name="category" class="form-control">
-                            <input type='file' name='displayImage' />
+                        </div>
+                        <!--<button type="upload" class="btn btn-md btn-primary"> Upload Picture </button>-->
+                            <input type="file" name="displayImage">
                             <input type="submit">
                     </form>
                 </div>
             </div>
             <div class="edit">
-                    <div class="editHolder"ng-repeat="oneItem in onesitems">
-                        <img src="{{oneItem.image}}"class="editImages"ng-click="selectDeleteItem(oneItem)">
+                    <div class="editHolder" ng-repeat="oneItem in onesitems">
+                        <img src="{{oneItem.image}}" class="editImages" ng-click="selectDeleteItem(oneItem)">
                      </div>
             </div>
                 <div class="deleteBox">
                         <label>Delete from list of potential items to trade?</label>
-                        <input class="form-control"value="{{currentItem.name}}">
+                        <input class="form-control" value="{{currentItem.name}}">
                             <button id="delete" class="btn btn-sm btn-primary" type="delete">Delete</button>
 
                 </div>

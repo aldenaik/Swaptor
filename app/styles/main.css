@@ -171,7 +171,7 @@ h4{
 .response{
     float: left;
     width: 75%;
-    height: 106%;
+    height: 198px;
     margin-left: 20px;
     border: 1px solid gray;
     margin-top: 1%;
@@ -223,7 +223,7 @@ h4{
 }
 
 .preview{
-    height: 56%;
+    height: 55%;
     margin-left: 2%;
     border: 1px solid gray;
     float: left;
@@ -250,6 +250,9 @@ h4{
 .previewImage{
     height: 100%;
     float: right;
+}
+.hideInput{
+    display: none;
 }
 .name{
     text-align: left;

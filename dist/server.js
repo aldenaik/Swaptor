@@ -17,7 +17,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var config = require('./lib/config/config');
 
 // Connect to database
-var db = mongoose.connect(config.mongo.uri, config.mongo.options);
+var db = mongoose.connect("mongodb://aldenaik:password123@ds037407.mongolab.com:37407/swaptor");
 
 // Bootstrap models
 var modelsPath = path.join(__dirname, 'lib/models');

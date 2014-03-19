@@ -21,9 +21,15 @@ angular.module('swaptorApp')
             console.log(oneItem);
             $scope.currentItem = oneItem;
 //                $scope.select = $scope.currentItem;
-            $scope.testEmail="Hey Swapper! I am interested in swapping your " + oneItem.name + " for my " + oneItem.name+". Here is my description; "+oneItem.description
+            $scope.testEmail="Hey Swapper! I am interested in swapping your " + oneItem.name + " for my " + oneItem.name+". Here is my description; "+oneItem.description+". If you are interesting in talking about a possible swap please email me here at "+oneItem.email+"."
         };
 
+        //// email////
+//        $scope.email()= function(){
+//        };
+
+
+////end email
         $scope.selectDeleteItem= function(oneItem){
             console.log(oneItem);
             $scope.currentItem = oneItem;
