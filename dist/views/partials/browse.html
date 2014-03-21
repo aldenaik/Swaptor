@@ -53,23 +53,48 @@
                                     <div class="instructions">
                                         Click an item to the left to select an item to swap.
                                     </div>
+                      <form id="contact-form" action="api/email" method="POST">
 
                                     <div class="response">
                                         <div class="previewEmail"></div>
                                         <div class="userResponseBox">
 
-                                            <textarea class="userResponse"> {{testEmail}}</textarea>
+                                            <textarea class="userResponse" type="text" name="message"> {{testEmail}}</textarea>
                                         </div>
                                             <div class="preview">
-                                                <img src="{{currentItem.image}}" class="currentItem">
+                                                <img src="{{currentItem.image}}" type="text" class="currentItem" name="image">
                                             </div>
+                                                    <input class="hideInput" type="text" name="image" value="{{currentItem.image}}">
+                                                    <input class="hideInput" type="text" name="hostImage" value="{{item.image}}">
+                                                    <input class="hideInput" type="text" name="email" value="{{item.email}}">
+                                                    <input class="hideInput" type="text" name="subject" value="Proposed {{item.name}} Swap">
 
-                                            <button class="email" ng-mouseup="openItem = ! openItem" ng-mousedown="email()">email</button>
-                                    </div>
+
+                                        <button type="submit" class="email" ng-mouseup="openItem = ! openItem" ng-mousedown="email()">email</button>
+                       </div></form>
+                                    <!--</div>-->
+                                    <!--<div>yo</div>-->
+
+                                    <!--<form id="contact-form" action="api/email" method="POST")>-->
+                                    <!--<div class="span5">-->
+                                     <!--<p> Full name:-->
+                                        <!--<input id="name" type="text" name="name"></p>-->
+                                    <!--<p> Email address:-->
+                                    <!--<input id="email" type="email" name="email"></p>-->
+                                    <!--<p> Subject:-->
+                                    <!--<input id="subject" type="text" name="subject"></p>-->
+                                    <!--<p> Message:-->
+                                    <!--<textarea id="message" type="text" name="message" rows="5"></textarea></p>-->
+                                    <!--<p> <button type="submit">Send message</button>-->
+                                   <!--</div>-->
+                                    <!--</form>-->
+
+
+
                                 </div>
+
                             </div>
                         </div>
-
                 </div>
            </div>
 

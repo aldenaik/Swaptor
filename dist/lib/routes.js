@@ -5,7 +5,6 @@ var api = require('./controllers/api'),
     users = require('./controllers/users'),
     session = require('./controllers/session');
 
-var middleware = require('./middleware');
 
 /**
  * Application routes
@@ -26,10 +25,25 @@ module.exports = function(app) {
     app.get('/api/items', api.items);
     app.get('/api/userOneItems', api.userOneItems);
 
-app.post('/api/pictures', api.pictures);
 
 
+//    var nodemailer = require("nodemailer");
+//
+//// create reusable transport method (opens pool of SMTP connections)
+//    var smtpTransport = nodemailer.createTransport("SMTP",{
+//        service: "Gmail",
+//        auth: {
+//            user: "swaptorservice@gmail.com",
+//            pass: "swaptortrade"
+//        }
+//    });
+    var middleware = require('./middleware');
+    app.get('/api/email', function (req, res) {
+//        res.render("partials/browse");
+    });
 
+    app.post('/api/email', api.email);
+    app.post('/api/pictures', api.pictures);
 
     // All undefined api routes should return a 404
   app.get('/api/*', function(req, res) {
