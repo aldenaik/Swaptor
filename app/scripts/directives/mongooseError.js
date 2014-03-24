@@ -19,15 +19,16 @@ angular.module('swaptorApp')
 
 
 .directive('sdMixItUp', function (){
-        return{
-            restrict: 'A',
-            link: function(scope, element, attrs){
-                var unwatch = scope.$watch(attrs.sdMixItUp, function(val) {
-                    if (val) {
-                        element.mixItUp();
-                        unwatch();
-                    }
-                });
-            }
-        };
-    });
+       return{
+           restrict: 'A',
+           link: function(scope, element, attrs){
+               var unwatch = scope.$watch(attrs.sdMixItUp, function(val) {
+                       if(element.mixItUp('isLoaded'))
+                          element.mixItUp('destroy');
+
+                       element.mixItUp();
+                       // unwatch();
+               });
+           }
+       };
+   });

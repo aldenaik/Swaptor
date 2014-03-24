@@ -3,7 +3,7 @@
 angular.module('swaptorApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      'title': 'Browse',
       'link': '/browse'
     }, {
         'title': 'Profile',

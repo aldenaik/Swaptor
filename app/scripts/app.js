@@ -28,12 +28,30 @@ angular.module('swaptorApp', [
         .when('/browse', {
             templateUrl: 'partials/browse',
             controller: 'BrowseCtrl',
-            authenticate: false
+            authenticate: false,
+            resolve:{
+                tradingItems: function(BrowseService){
+                    return BrowseService.tradingItems();
+                  },
+                
+                onesitems: function(BrowseService){
+                     return BrowseService.onesitems();
+            }
+        }
         })
         .when('/profile', {
             templateUrl: 'partials/profile',
             controller: 'BrowseCtrl',
-            authenticate: false
+            authenticate: false,
+          resolve:{
+                tradingItems: function(BrowseService){
+                    return BrowseService.tradingItems();
+                  },
+                
+                onesitems: function(BrowseService){
+                     return BrowseService.onesitems();
+            }
+        }
         })
       .otherwise({
         redirectTo: '/'

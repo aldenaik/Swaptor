@@ -1,7 +1,8 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Thing = mongoose.model('Thing');
+    Thing = mongoose.model('Thing'),
+    Story = mongoose.model('Story');
 
 /**
  * Get awesome things
@@ -16,17 +17,30 @@ exports.awesomeThings = function(req, res) {
   });
 };
 
+
+exports.saveStory = function(req, res) {
+    var newStory = new Story({
+      title: req.body.title,
+      body: req.body.body
+    });
+    console.log('line 26');
+    newStory.save(function(err) {
+        if(err){
+            console.log(err);
+        }
+        res.send({success: true});
+    });
+};
+
 //mongoose call to labs... not working
 //exports.items = function(req, res) {
-//    console.log("spiiii/itemss");
+//    console.log(res);
 //    Thing.find({}, function(err, things){
 //        console.log(err);
-//
 //        res.send(things);
 //
-//
 //    } );
-
+//};
 
 
 
@@ -220,7 +234,7 @@ var AWS = require('aws-sdk'),
 AWS.config.update({ accessKeyId: 'AKIAJXEUWULMFXG57REQ', secretAccessKey: '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' });
 exports.pictures = function(req, res) {
 console.log(req.files); ///where image is kept
-console.log(req.files); ///here input values are kept
+console.log(req.body); ///here input values are kept
 
     fs.readFile(req.files.displayImage.path, function (err, data) {
         if (err) { throw err; }
@@ -237,8 +251,11 @@ console.log(req.files); ///here input values are kept
             console.log(err);
             console.log(data);
         });
+        res.redirect('/profile');         // shut down the connection pool, no more messages
     });
 };
+
+
 
 ////to email
 var nodemailer = require("nodemailer");
@@ -271,10 +288,14 @@ exports.email = function (req, res) {
         }else{
             console.log("Message sent: " + response.message);
         }
-        smtpTransport.close(); // shut down the connection pool, no more messages
+        smtpTransport.close();
+        res.redirect('/browse');         // shut down the connection pool, no more messages
     });
 //        res.render("partials/browse", { success: "building web app" });
 };
+
+
+
 
 
 

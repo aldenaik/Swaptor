@@ -30,7 +30,16 @@ Thing.find({}).remove(function() {
     name : 'MongoDB + Mongoose',
     info : 'An excellent document database. Combined with Mongoose to simplify adding validation and business logic.',
     awesomeness: 10
-  }, function() {
+  },
+//      name:'GoPro',
+//            image:'https://s3.amazonaws.com/swapter1/gopro.jpeg',
+//            description:'Record all sick stunts and ish you do... and if you dont do anything that cool, just think of all the cool things you will do when you have this camera',
+//            want:'Any Electronics',
+//            categories: ['all', 'electronics'],
+//            email: 'aldenaikele@gmail.com'
+//    },
+
+      function() {
       console.log('finished populating things');
     }
   );
@@ -40,7 +49,7 @@ Thing.find({}).remove(function() {
 User.find({}).remove(function() {
   User.create({
     provider: 'local',
-    name: 'Test User',
+    name: 'Test Hello',
     email: 'test@test.com',
     password: 'test'
   }, function() {

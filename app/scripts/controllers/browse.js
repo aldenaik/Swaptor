@@ -1,20 +1,18 @@
 'use strict';
 
 angular.module('swaptorApp')
-  .controller('BrowseCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-        $http.get('/api/items').success(function(response) {
-            $scope.tradingItems = response.tradingItems;
+  .controller('BrowseCtrl', function ($scope, $http, tradingItems, onesitems) {
 
-        });
+  // .controller('BrowseCtrl', ['BrowseService', function ($scope, $http, tradingItems, onesitems) {
+  //           ]
 
-        $http.get('/api/useroneitems').success(function(response) {
-            $scope.onesitems = response.onesitems;
-        });
+//        $http.get('/api/items').success(function(response) {
+            $scope.tradingItems = tradingItems;
+
+
+        // $http.get('/api/useroneitems').success(function(response) {
+            $scope.onesitems = onesitems;
+        // });
 
 
         $scope.selectItem= function(oneItem){
