@@ -3,7 +3,7 @@
 angular.module('swaptorApp')
   .controller('BrowseCtrl', function ($scope, $http, tradingItems, onesitems) {
 
-  // .controller('BrowseCtrl', ['BrowseService', function ($scope, $http, tradingItems, onesitems) {
+        // .controller('BrowseCtrl', ['BrowseService', function ($scope, $http, tradingItems, onesitems) {
   //           ]
 
 //        $http.get('/api/items').success(function(response) {

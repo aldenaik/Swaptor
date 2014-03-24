@@ -17,7 +17,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 var config = require('./lib/config/config');
 
 // Connect to database
-var db = mongoose.connect(config.mongo.uri);
+var db = mongoose.connect(config.mongo.uri, config.mongo.options);
 
 
 // Bootstrap models
