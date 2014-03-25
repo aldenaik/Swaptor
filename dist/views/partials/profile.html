@@ -8,18 +8,19 @@
 
             <div class="add">
                 <div class="spacing">
-                    <form action="/api/pictures" method="post" enctype="multipart/form-data">
+                    <form action="/api/tradingItems" method="post" enctype="multipart/form-data">
 
                             <label>Title of Item</label>
-                            <input type="text" name="title" class="form-control">
+                            <input type="text" name="name" class="form-control">
                             <label>Description</label>
                             <input type="text" name="description" class="form-control">
                             <label>What are you willing to swap for it?</label>
-                            <input type="text" name="willingToTrade" class="form-control">
+                            <input type="text" name="want" class="form-control">
                             <label>What category does it fall under?</label> (Electronics, Bikes, Furniture, Clothing)
-                            <input type="text" name="category" class="form-control">
+                            <input type="text" name="categories" class="form-control">
                             <input type="file" name="displayImage">
-                            <input type="submit">
+                            <input type="submit" class="savetradingItems">
+
                     </form>
                 </div>
             </div>

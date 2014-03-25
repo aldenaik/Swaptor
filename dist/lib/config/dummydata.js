@@ -46,14 +46,13 @@ Thing.find({}).remove(function() {
 });
 
 // Clear old users, then add a default user
-User.find({}).remove(function() {
+User.find({});
   User.create({
     provider: 'local',
-    name: 'Test Hello',
-    email: 'test@test.com',
+    name: 'Test',
+    email: 'test@gmail.com',
     password: 'test'
   }, function() {
       console.log('finished populating users');
     }
   );
-});

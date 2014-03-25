@@ -46,7 +46,8 @@ UserSchema
     return {
       'name': this.name,
       'role': this.role,
-      'provider': this.provider
+      'email': this.email,
+        'provider': this.provider
     };
   });
 

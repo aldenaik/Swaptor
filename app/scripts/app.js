@@ -28,7 +28,7 @@ angular.module('swaptorApp', [
         .when('/browse', {
             templateUrl: 'partials/browse',
             controller: 'BrowseCtrl',
-            authenticate: false,
+            authenticate: true,
             resolve:{
                 tradingItems: function(BrowseService){
                     return BrowseService.tradingItems();
@@ -42,7 +42,7 @@ angular.module('swaptorApp', [
         .when('/profile', {
             templateUrl: 'partials/profile',
             controller: 'BrowseCtrl',
-            authenticate: false,
+            authenticate: true,
           resolve:{
                 tradingItems: function(BrowseService){
                     return BrowseService.tradingItems();

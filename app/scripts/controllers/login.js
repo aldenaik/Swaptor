@@ -20,6 +20,7 @@ angular.module('swaptorApp')
         .catch( function(err) {
           err = err.data;
           $scope.errors.other = err.message;
+
         });
       }
     };
