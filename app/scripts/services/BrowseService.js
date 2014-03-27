@@ -3,12 +3,16 @@
 angular.module('swaptorApp')
   .service('BrowseService', function BrowseService($q, $http) {
         return{
-            tradingItems:function() {
+            tradingitems:function() {
                 var deferred = $q.defer();
-                    $http({method: 'GET', url:'/api/items'}).success(function(data){
-                        deferred.resolve(data.tradingItems);
+                            $http({method: 'GET', url:'/api/tradingitems'}).success(function(data){
+                        deferred.resolve(data);
 
-                    }
+//                            $http({method: 'GET', url:'/api/tradingItems'}).success(function(data){
+//                            $http({method: 'GET', url:'/api/items'}).success(function(data){
+
+
+                                }
                 );
             return deferred.promise;
         },

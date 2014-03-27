@@ -17,7 +17,7 @@ module.exports = function(app) {
 
   app.post('/api/story', api.saveStory);
 
-  app.post('/api/tradingItems', api.savetradingItems);
+  app.post('/api/tradingitems', api.savetradingitems);
 
 
     app.post('/api/users', users.create);
@@ -28,7 +28,11 @@ module.exports = function(app) {
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);
 
-    app.get('/api/items', api.items);
+
+    app.get('/api/tradingitems', api.showtradingitems);
+
+
+//    app.get('/api/items', api.items);
     app.get('/api/userOneItems', api.userOneItems);
 
 

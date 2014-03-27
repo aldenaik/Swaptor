@@ -6,17 +6,17 @@ var mongoose = require('mongoose'),
 /**
  * Story Schema
  */
-var tradingItemsSchema = new Schema({
+var tradingitemsSchema = new Schema({
     name: String,
     image: String,
     description: String,
     want: String,
-    categories: String,
+    categories: Array,
     email: String
 
 });
 
-mongoose.model('tradingItems', tradingItemsSchema);
+mongoose.model('tradingitems', tradingitemsSchema);
 //
 //
 //StorySchema = tradingItemsSchema

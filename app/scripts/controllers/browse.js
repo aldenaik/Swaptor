@@ -1,18 +1,11 @@
 'use strict';
 
 angular.module('swaptorApp')
-  .controller('BrowseCtrl', function ($scope, $http, tradingItems, onesitems) {
+  .controller('BrowseCtrl', function ($scope, $http, tradingitems, onesitems) {
 
-        // .controller('BrowseCtrl', ['BrowseService', function ($scope, $http, tradingItems, onesitems) {
-  //           ]
+            $scope.tradingitems = tradingitems;
 
-//        $http.get('/api/items').success(function(response) {
-            $scope.tradingItems = tradingItems;
-
-
-        // $http.get('/api/useroneitems').success(function(response) {
             $scope.onesitems = onesitems;
-        // });
 
 
         $scope.selectItem= function(oneItem){

@@ -30,8 +30,8 @@ angular.module('swaptorApp', [
             controller: 'BrowseCtrl',
             authenticate: true,
             resolve:{
-                tradingItems: function(BrowseService){
-                    return BrowseService.tradingItems();
+                tradingitems: function(BrowseService){
+                    return BrowseService.tradingitems();
                   },
                 
                 onesitems: function(BrowseService){
@@ -44,8 +44,8 @@ angular.module('swaptorApp', [
             controller: 'BrowseCtrl',
             authenticate: true,
           resolve:{
-                tradingItems: function(BrowseService){
-                    return BrowseService.tradingItems();
+                tradingitems: function(BrowseService){
+                    return BrowseService.tradingitems();
                   },
                 
                 onesitems: function(BrowseService){
