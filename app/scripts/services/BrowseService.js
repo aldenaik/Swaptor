@@ -27,15 +27,6 @@ angular.module('swaptorApp')
                     }
                 );
                 return deferred.promise;
-            },
-            onesitems:function() {
-                var deferred = $q.defer();
-                    $http({method: 'GET', url:'/api/useroneitems'}).success(function(data){
-                        deferred.resolve(data.onesitems);
-
-                    }
-                );
-            return deferred.promise;
             }
         };
   });

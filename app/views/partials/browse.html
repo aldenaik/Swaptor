@@ -19,7 +19,7 @@
            <div class="resultsBackground">
 
                 <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingitems">
-                    <img src="{{item.image}}" class="previewImage"ng-click="openItem = ! openItem()">
+                    <img src="{{item.image}}" class="previewImage"ng-mousedown="save(item)" ng-mouseup="openItem = ! openItem()">
                         <div class="dim"ng-class="{ 'hidden': ! openItem }">
                             <div class="boxExpand">
                                 <h1 class="name">{{item.name}}
@@ -63,7 +63,7 @@
                                             <div class="preview">
                                                 <img src="{{currentItems.image}}" type ="text" class="currentItem" name="image">
                                             </div>
-                                                    <input class="hideInput" type="text" name="image"value="{{currentItem.image}}">
+                                                    <input class="hideInput" type="text" name="image"value="{{currentItems.image}}">
                                                     <input class="hideInput" type="text" name="hostImage"value="{{item.image}}">
                                                     <input class="hideInput" type="text" name="email" value="{{item.email}}">
                                                     <input class="hideInput" type="text" name="subject" value="Proposed {{item.name}} Swap">
