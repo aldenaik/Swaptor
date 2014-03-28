@@ -19,7 +19,7 @@
            <div class="resultsBackground">
 
                 <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingitems">
-                    <img src="{{item.image}}" class="previewImage"ng-click="openItem = ! openItem">
+                    <img src="{{item.image}}" class="previewImage"ng-click="openItem = ! openItem()">
                         <div class="dim"ng-class="{ 'hidden': ! openItem }">
                             <div class="boxExpand">
                                 <h1 class="name">{{item.name}}
@@ -42,10 +42,9 @@
                                     <img src="{{item.image}}"class="fullSizeImage">
                                 </div>
                                 <div class="tradeInfo">
-
                                     <div class="myItems">
-                                        <div class="items" ng-repeat="oneItem in onesitems" >
-                                            <img src="{{oneItem.image}}"class="previewImages"ng-click="selectItem(oneItem)">
+                                        <div class="items" ng-repeat="assoc_item in tradingitems | filter: {user: currentUser._id}" >
+                                            <img src="{{assoc_item.image}}"class="previewImages"ng-click="selectItem(assoc_item)">
                                         </div>
 
                                     </div>
@@ -53,7 +52,7 @@
                                     <div class="instructions">
                                         Click an item to the left to select an item to swap.
                                     </div>
-                      <form id="contact-form" action="api/email" method="POST")>
+                      <form id="contact-form" action="api/email" method="POST">
 
                                     <div class="response">
                                         <div class="previewEmail"></div>
@@ -62,7 +61,7 @@
                                             <textarea class="userResponse" type="text" name="message"> {{testEmail}}</textarea>
                                         </div>
                                             <div class="preview">
-                                                <img src="{{currentItem.image}}" type ="text" class="currentItem" name="image">
+                                                <img src="{{currentItems.image}}" type ="text" class="currentItem" name="image">
                                             </div>
                                                     <input class="hideInput" type="text" name="image"value="{{currentItem.image}}">
                                                     <input class="hideInput" type="text" name="hostImage"value="{{item.image}}">

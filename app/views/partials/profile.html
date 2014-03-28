@@ -25,14 +25,28 @@
                 </div>
             </div>
             <div class="edit">
-                    <div class="editHolder"ng-repeat="oneItem in onesitems">
-                        <img src="{{oneItem.image}}"class="editImages"ng-click="selectDeleteItem(oneItem)">
+                    <div class="editHolder"ng-repeat="item in tradingitems">
+                        <img src="{{item.image}}"class="editImages"ng-click="selectDeleteItem(item)">
                      </div>
             </div>
                 <div class="deleteBox">
                         <label>Delete from list of potential items to trade?</label>
                         <input class="form-control"value="{{currentItem.name}}">
-                            <button id="delete" class="btn btn-sm btn-primary" type="delete">Delete</button>
+
+                    <!--<form id="deleteForm" action="api/deletetradingitems" method="POST">-->
+                            <!--<input class="hideInput" type="text" name="name"value="{{currentItem.name}}">-->
+                            <!--<input class="hideInput" type="text" name="image"value="{{currentItem.image}}">-->
+                            <!--<input class="hideInput" type="text" name="description"value="{{currentItem.description}}">-->
+                            <!--<input class="hideInput" type="text" name="want" value="{{currentItem.want}}">-->
+                            <!--<input class="hideInput" type="text" name="email" value="{{currentItem.email}}">-->
+                            <!--<input class="hideInput" type="text" name="user" value="{{currentItem.user}}">-->
+                            <!--<input class="hideInput" type="text" name="id" value="{{currentItem.id}}">-->
+                            <!--<input class="hideInput" type="text" name="categories" value="{{currentItem.categories}}">-->
+                            <!--<input class="hideInput" type="text" name="__v" value="{{currentItem.__v}}">-->
+
+                        <!--<button type="submit" class="delete">delete</button>-->
+                    <!--</form>-->
+                            <button id="delete" class="btn btn-sm btn-primary" ng-click="deleteitem(currentItem)" type="delete">Delete</button>
 
                 </div>
         </div>

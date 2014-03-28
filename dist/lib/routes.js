@@ -28,6 +28,7 @@ module.exports = function(app) {
   app.post('/api/session', session.login);
   app.del('/api/session', session.logout);
 
+//    app.del('/api/tradingitems', api.deltradingitems);
 
     app.get('/api/tradingitems', api.showtradingitems);
 
@@ -40,6 +41,8 @@ module.exports = function(app) {
     app.get('/api/email', function (req, res) {
 //        res.render("partials/browse");
     });
+    app.post('/api/deletetradingitems', api.deletetradingitems);
+
 
     app.post('/api/email', api.email);
 

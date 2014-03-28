@@ -16,6 +16,18 @@ angular.module('swaptorApp')
                 );
             return deferred.promise;
         },
+            deleteitem:function(id) {
+                var deferred = $q.defer();
+                $http({method: 'POST', url:'/api/deletetradingitems?id='+id}).success(function(data){
+                        deferred.resolve(data);
+
+//                            $http({method: 'GET', url:'/api/tradingItems'}).success(function(data){
+//                            $http({method: 'GET', url:'/api/items'}).success(function(data){
+
+                    }
+                );
+                return deferred.promise;
+            },
             onesitems:function() {
                 var deferred = $q.defer();
                     $http({method: 'GET', url:'/api/useroneitems'}).success(function(data){
