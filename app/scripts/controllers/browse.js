@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('swaptorApp')
-  .controller('BrowseCtrl', function ($scope, $http, tradingitems, onesitems, Auth, BrowseService) {
+  .controller('BrowseCtrl', function ($scope, $http, tradingitems, Auth, BrowseService) {
 
              $scope.tradingitems = tradingitems;
 

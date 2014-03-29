@@ -34,7 +34,6 @@ module.exports = function(app) {
 
 
 //    app.get('/api/items', api.items);
-    app.get('/api/userOneItems', api.userOneItems);
 
 
     var middleware = require('./middleware');

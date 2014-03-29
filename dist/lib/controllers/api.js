@@ -145,70 +145,6 @@ exports.saveStory = function(req, res) {
 //    });
 //};
 
-exports.userOneItems = function(req, res) {
-        res.send({
-
-            onesitems: [
-                {'name':'GoPro',
-                    'image':'https://s3.amazonaws.com/swapter1/gopro.jpeg',
-                    'description':'Record all sick stunts and ish you do... and if you dont do anything that cool, just think of all the cool things you will do when you have this camera',
-                    'want':'Any Electronics',
-                    'categories': ['all', 'electronics'],
-                    'email': 'aldenaikele@gmail.com'
-                },
-                {'name':'RVCA hat',
-                    'image':'https://s3.amazonaws.com/swapter1/hat.jpeg',
-                    'description':'Think of all the money you will save in haircuts if you can just hide your knappy hair under this cap',
-                    'want':'maybe some old shoes?',
-                    'categories': ['all','clothing'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-                {'name':'Picture of Alden',
-                    'image':'https://s3.amazonaws.com/swapter1/38(web).jpg',
-                    'description':'He looks good.',
-                    'want':'Nothing',
-                    'categories': ['all','furniture'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-                {'name':'Harley Davidson Iron 883',
-                    'image':'https://s3.amazonaws.com/swapter1/motorcycle.jpeg',
-                    'description':'Must sell, I didnt have any leather to wear with this hog',
-                    'want':'A sweet Cafe Racer',
-                    'categories': ['all','bikes'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-                {'name':'Mountain Bike',
-                    'image':'https://s3.amazonaws.com/swapter1/mountain+bike.jpeg',
-                    'description':'Do you bikes on the side of a mountain? this is the bike for you!',
-                    'want':'A road bike (I live in the city not the mountains)',
-                    'categories': ['all','bikes'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-
-                {'name':'Table Saw',
-                    'image':'https://s3.amazonaws.com/swapter1/saw.jpeg',
-                    'description':'Cut some wood!',
-                    'want':'Some wood to cut',
-                    'categories': ['all','electronics'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-                {'name':'Watch',
-                    'image':'https://s3.amazonaws.com/swapter1/watch.jpeg',
-                    'description':'Your arm will look good.',
-                    'want':'An old Xbox',
-                    'categories': ['all','clothing'],
-                    'email': 'aldenaikele@gmail.com'
-
-                },
-
-            ]
-        });
-};
 
 //to upload pictures to amazon s3
 
@@ -227,7 +163,6 @@ console.log(req.user); ///where image is kept
 
 
 
-// Create a bucket and put image in it. I had to use the name because amazon doesnt accept email address...
         var s3 = new AWS.S3();
         s3.client.createBucket({Bucket: req.user.id}, function() {
             var data = {
@@ -247,7 +182,6 @@ console.log(req.user); ///where image is kept
         });
 
 
-//        res.redirect('/profile');         // shut down the connection pool, no more messages
      });
 
             var newtradingitems = new Tradingitems({
@@ -261,13 +195,6 @@ console.log(req.user); ///where image is kept
             });
 
     console.log("created categories:", newtradingitems.categories);
-
-//    categories: ['all', req.body.categories],
-
-//            console.log(req.user); ///where image is kept
-        //    console.log(req); ///where image is kept
-
-        //    console.log(newtradingitems);
 
             newtradingitems.save(function(err) {
                 if(err){
@@ -297,18 +224,6 @@ exports.deletetradingitems = function(req, res) {
         res.redirect('/profile');         // shut down the connection pool, no more messages
     });
 
-//    var id = req.params.id;
-//    console.log('Deleting item: ' + id);
-//    db.collection('tradingitems', function(err, tradingitems) {
-//        tradingitems.remove({'_id':new BSON.ObjectID(id)}, {safe:true}, function(err, result) {
-//            if (err) {
-//                res.send({'error':'An error has occurred - ' + err});
-//            } else {
-//                console.log('' + result + ' document(s) deleted');
-//                res.send(req.body);
-//            }
-//        });
-//    });
 }
 
 
@@ -328,9 +243,9 @@ var smtpTransport = nodemailer.createTransport("SMTP",{
 exports.email = function (req, res) {
     console.log(req.body);
     var mailOptions = {
-        to: req.body.email, // list of receivers
-        subject: req.body.subject, // Subject line
-        text: req.body.message, // plaintext body
+        to: req.body.email,
+        subject: req.body.subject,
+        text: req.body.message,
         attachments: [
             { filePath:req.body.image
             },
@@ -347,35 +262,4 @@ exports.email = function (req, res) {
         smtpTransport.close();
         res.redirect('/browse');         // shut down the connection pool, no more messages
     });
-//        res.render("partials/browse", { success: "building web app" });
 };
-
-
-
-
-
-
-
-//
-//
-//
-//// setup e-mail data with unicode symbols
-//var mailOptions = {
-//    to: "aldenaikele@gmail.com", // list of receivers
-//    subject: "dresser ✔", // Subject line
-//    html: "<b>Hey Swapper i want to trade for your Ipad... I have attached a picture of my things you can email me @ thisistight@gmail.com  if you are interested</b><img src='https://s3-us-west-2.amazonaws.com/tradeitems/sample/dresser.jpg' />" // html body
-//
-//};
-//
-//// send mail with defined transport object
-//
-//smtpTransport.sendMail(mailOptions, function(error, response){
-//    if(error){
-//        console.log(error);
-//    }else{
-//        console.log("Message sent: " + response.message);
-//    }
-//
-//    // if you don't want to use this transport object anymore, uncomment following line
-//    //smtpTransport.close(); // shut down the connection pool, no more messages
-//});

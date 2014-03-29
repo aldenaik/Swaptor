@@ -3,9 +3,10 @@
     <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
         <a ng-href="{{item.link}}">{{item.title}}</a>
     </li>
-    <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
-    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
-    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+    <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">LOGIN</a></li>
+    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">SIGN UP</a></li>
+    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">LOGOUT</a></li>
   </ul>
-  <div class="title">SWAPTOR</div>
+  <img src="/images/c533c12e.Swaptor-Logo-Black.png" class="logo">
+    <img src="/images/bbb2fd00.Swaptor_Writing_White.png" class="title">
 </div>

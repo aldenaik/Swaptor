@@ -33,13 +33,9 @@ angular.module('swaptorApp', [
                 tradingitems: function(BrowseService){
                     return BrowseService.tradingitems();
                   },
-                deleteitem: function(BrowseService){
-                    return BrowseService.deleteitem();
-                },
 
-                onesitems: function(BrowseService){
-                     return BrowseService.onesitems();
-            }
+
+
         }
         })
         .when('/profile', {
@@ -51,9 +47,7 @@ angular.module('swaptorApp', [
                   return BrowseService.tradingitems();
               },
 
-              onesitems: function(BrowseService){
-                  return BrowseService.onesitems();
-              }
+
         }
         })
       .otherwise({
