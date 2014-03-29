@@ -1,12 +1,13 @@
 <div class="header" ng-controller="NavbarCtrl">
   <ul class="nav nav-pills pull-right">
-    <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
+      <li class="topRightMenu" ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">LOGOUT</a></li>
+      <li class="topRightMenu" ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">SIGN UP</a></li>
+      <li class="topRightMenu" ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">LOGIN</a></li>
+
+      <li class="topRightMenu" ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
         <a ng-href="{{item.link}}">{{item.title}}</a>
     </li>
-    <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">LOGIN</a></li>
-    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">SIGN UP</a></li>
-    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">LOGOUT</a></li>
   </ul>
-  <img src="/images/Swaptor-Logo-Black.png" class="logo">
-    <img src="/images/Swaptor_Writing_White.png" class="title">
+  <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="logo">
+    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor_Writing_White.png" class="title">
 </div>

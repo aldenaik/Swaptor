@@ -5,19 +5,19 @@
         <div class="loginBox">
             <div class="row">
                 <div class="col-sm-12">
-                        <h1>Login</h1>
-                        <p class="pSpacing">Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@gmail.com</code> / <code>test</code></p>
+                        <h1 class="spacing">Login</h1>
+                        <p class="spacing">Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@gmail.com</code> / <code>test</code></p>
                 </div>
                  <div class="col-sm-12">
                      <div class="spacing">
                         <form class="form" name="form" ng-submit="login(form)" novalidate="">
                               <div class="form-group">
                                 <label>Email</label>
-                                      <input type="text" name="email" class="form-control" ng-model="user.email">
+                                      <input type="text" name="email" class="coolInput" ng-model="user.email">
                               </div>
                               <div class="form-group">
                                     <label>Password</label>
-                                        <input type="password" name="password" class="form-control" ng-model="user.password">
+                                        <input type="password" name="password" class="coolInput" ng-model="user.password">
                               </div>
 
                               <div class="form-group has-error">
@@ -27,7 +27,7 @@
                                     <p class="help-block">{{ errors.other }}</p>
                               </div>
 
-                              <button type="submit" class="btn btn-lg btn-primary"> Sign in </button>
+                              <button type="submit" class="largeButton"> Sign in </button>
                         </form>
                      </div>
                  </div>

@@ -3,14 +3,15 @@
 angular.module('swaptorApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'BROWSE',
-      'link': '/browse'
-    }, {
-        'title': 'PROFILE',
-        'link': '/profile'
-    },{
       'title': 'SETTINGS',
       'link': '/settings'
+    },{
+        'title': 'PROFILE',
+        'link': '/profile'
+    },
+        {
+        'title': 'BROWSE',
+        'link': '/browse'
     }];
     
     $scope.logout = function() {
