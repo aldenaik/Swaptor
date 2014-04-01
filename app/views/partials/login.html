@@ -3,10 +3,8 @@
 
     <div class="background">
         <div class="loginBox">
-            <div class="row">
                 <div class="col-sm-12">
-                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor_Writing_White.png" class="openingTitle">
-                    <!--<img src="/images/Swaptor-Logo-Black.png" class="openingLogo">-->
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Login_Logo_White.png" class="openingTitle">
                     <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
 
                 </div>
@@ -15,11 +13,16 @@
 
                         <form class="form" name="form" ng-submit="login(form)" novalidate>
                               <div class="form-group">
-                                <label>Email</label>
+                                  <div class="largeButton">
+
+                                  <label class="centered">Email</label>
+                                      </div>
                                       <input type="text" name="email" class="coolInput" ng-model="user.email">
                               </div>
                               <div class="form-group">
-                                    <label>Password</label>
+                                  <div class="largeButton">
+                                    <label class="centeredPassword">Password</label>
+                                      </div>
                                         <input type="password" name="password" class="coolInput" ng-model="user.password">
                               </div>
 
@@ -30,14 +33,14 @@
                                     <p class="help-block">{{ errors.other }}</p>
                               </div>
 
-                              <button type="submit" class="largeButton"> Sign in </button>
+                              <button type="submit" class="smallButton"> LOGIN </button>
                         </form>
-                        <hr>
-                        Not registered? <a href="/signup" class="text-center new-account">Create an account.</a>
+                        <div class="bottomRightCorner">
+                                Not registered? <a href="/signup" class="signup">SIGNUP.</a>
+                        </div>
                      </div>
                 </div>
 
-             </div>
         </div>
     </div>
 </div>

@@ -3,52 +3,49 @@
     <div class="background">
         <div class="profileBox">
             <div class="col-sm-12">
-                <h1>Your Profile </h1>
+                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Profile_Logo_White.png" class="profileTitle">
+                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="profileLogo">
             </div>
+            <div class="bottomDim">
+                <div class="whiteBox">
+                    <div class="left">
+                        <form action="/api/tradingitems" method="post" enctype="multipart/form-data">
 
-            <div class="add">
-                <div class="spacing">
-                    <form action="/api/tradingitems" method="post" enctype="multipart/form-data">
+                                <label class="label">Title of Item:</label>
+                                <input type="text" name="name" class="inputProfile">
+                                <label class="label">Description:</label>
+                                <input type="text" name="description" class="inputProfile">
+                            <br>
+                            <br>
+                            <br>
+                                <label class="labelLong">What are you willing to swap for?</label>
+                                <input type="text" name="want" class="inputProfileLong">
+                                <label class="labelLong">What category does it fall under?<br></label> <label class="labelSub"> (electronics, bikes, furniture, clothing)</label>
+                                <input type="text" name="categories" class="inputProfileLong">
+                            <!--<div class="smallButtonFile">Choose File-->
+                                 <input type="file" name="displayImage" class="fileHide">
+                                <input type="submit" class="smallButtonProfile">
 
-                            <label>Title of Item</label>
-                            <input type="text" name="name" class="form-control">
-                            <label>Description</label>
-                            <input type="text" name="description" class="form-control">
-                            <label>What are you willing to swap for it?</label>
-                            <input type="text" name="want" class="form-control">
-                            <label>What category does it fall under?</label> (electronics, bikes, furniture, clothing)
-                            <input type="text" name="categories" class="form-control">
-                            <input type="file" name="displayImage">
-                            <input type="submit" class="savetradingitems">
-
-                    </form>
-                </div>
-            </div>
-            <div class="edit">
-                    <div class="editHolder" ng-repeat="item in tradingitems | filter: {user: currentUser._id}">
-                        <img src="{{item.image}}" class="editImages" ng-click="selectDeleteItem(item)">
+                        </form>
                      </div>
-            </div>
-                <div class="deleteBox">
-                        <label>Delete from list of potential items to trade?</label>
-                        <input class="form-control" value="{{currentItem.name}}">
-
-                    <!--<form id="deleteForm" action="api/deletetradingitems" method="POST">-->
-                            <!--<input class="hideInput" type="text" name="name"value="{{currentItem.name}}">-->
-                            <!--<input class="hideInput" type="text" name="image"value="{{currentItem.image}}">-->
-                            <!--<input class="hideInput" type="text" name="description"value="{{currentItem.description}}">-->
-                            <!--<input class="hideInput" type="text" name="want" value="{{currentItem.want}}">-->
-                            <!--<input class="hideInput" type="text" name="email" value="{{currentItem.email}}">-->
-                            <!--<input class="hideInput" type="text" name="user" value="{{currentItem.user}}">-->
-                            <!--<input class="hideInput" type="text" name="id" value="{{currentItem.id}}">-->
-                            <!--<input class="hideInput" type="text" name="categories" value="{{currentItem.categories}}">-->
-                            <!--<input class="hideInput" type="text" name="__v" value="{{currentItem.__v}}">-->
-
-                        <!--<button type="submit" class="delete">delete</button>-->
-                    <!--</form>-->
-                            <button id="delete" class="btn btn-sm btn-primary" ng-click="deleteitem(currentItem)" type="delete">Delete</button>
+                    <div class="right">
+                        <div class="edit">
+                            <div class="editHolder" ng-repeat="item in tradingitems | filter: {user: currentUser._id}">
+                                <img src="{{item.image}}" class="editImages" ng-click="selectDeleteItem(item)">
+                            </div>
+                        </div>
+                        <div class="deleteBox">
+                            <label class="deleteInstructions">Select an image above, and click delete, to remove the item from your stash of items to swap?</label>
+                            <div>
+                                <input class="deleteShow" value="{{currentItem.name}}" readonly="readonly">
+                                <button class="smallButtonDelete" ng-click="deleteitem(currentItem)" type="delete">Delete</button>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
+            </div>
+
         </div>
     </div>
 </div>

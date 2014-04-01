@@ -46,7 +46,7 @@ background-color: black;
     height: 90px;
     margin-top:.7% ;
     margin-left:2% ;
-    opacity: .7;
+    opacity: .75;
     float: left;
 }
 .title{
@@ -74,6 +74,120 @@ height: 80px;
     opacity: .75;
 
 }
+.browseLogo{
+    position: absolute;
+    height: 90px;
+    margin-top: 6%;
+    margin-left: 10%;
+    opacity: .75;
+
+}
+.browseTitle{
+    height: 65px;
+    margin-top:4% ;
+    margin-right:3% ;
+    float: right;
+}
+.profileTitle{
+    height: 65px;
+    margin-top:2.4% ;
+    margin-right:3% ;
+    float: right;
+}
+.profileLogo{
+    position: absolute;
+    height: 100px;
+    margin-top: 2%;
+    margin-left: 40%;
+    opacity: .75;
+
+}
+.left{
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+.leftBrowse{
+    width: 50%;
+    float: left;
+    height: 55%;
+}
+.rightBrowse{
+    width: 46%;
+    float: right;
+    height: 55%;
+}
+.right{
+    width: 43%;
+    float: right;
+}
+.label{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.6em;
+    margin-left: 2%;
+}
+.labelLong{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.6em;
+    margin-left: 2%;
+}
+.labelSub{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: .9em;
+    margin-left: 2%;
+}
+.labelBrowseTitle{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.7em;
+    width: 80%;
+    text-align: left;
+    float: left;
+    margin-top: 4%;
+    margin-left: 4%;
+
+}
+.labelBrowse{
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.4em;
+    text-align: left;
+    float: left;
+    margin-top: 10%;
+    margin-left: 4%;
+
+
+}
+.inputProfile{
+    width: 60%;
+    height: 20px;
+    font-size: 1em;
+    margin: 6% 1% 1% 2%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.inputProfileLong{
+    width: 90%;
+    height: 20px;
+    font-size: 1em;
+    margin: 1% 1% 1% 2%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+.inputBrowse{
+    width: 90%;
+    height: 20px;
+    font-size: .8em;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    float: left;
+    margin-left: 4%;
+    margin-top: 2%;
+
+}
+
 .bottomDim{
     height: 84%;
     background-color: rgba(255, 255, 255, 0.5);
@@ -88,6 +202,16 @@ height: 80px;
     background-color: #ffffff;
     padding: 1%;
     margin-top: 1%;
+    padding: 1%;
+}
+.whiteBoxBrowse{
+    margin-left: 4%;
+    width: 90%;
+    height: 92%;
+    background-color: #ffffff;
+    padding: 1%;
+    margin-top: 1%;
+    padding: 1%;
 }
 .intro{
     width: 70%;
@@ -96,36 +220,230 @@ height: 80px;
     padding-top: 14%;
     text-align: center;
     font-size: 1.5em;
-    color: gray;
+    color: rgba(0, 0, 0, 0.3)
+}
+.form{
+    width: 70%;
+    line-height: 130%;
+    margin-left: 10%;
+    padding-top: 10%;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.3)
 }
 .buttonBox{
     width: 40%;
     margin-left: 27%;
-    padding-top: 10%;
+    padding-top: 7%;
     text-align: center;
 
 }
 .background{
-    background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/Screenshot.jpg');
+    background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/BackgroundItems.jpg');
     background-repeat: no-repeat;
     background-size:101%;
     margin: 0;
     /*width: 82px;*/
     height: 105%;
 }
-.coolInput{
-    width: 99%;
-    height: 30px;
-    margin: 1%;
-    margin-left: 0%;
-    font-size: 1.2em;
+
+
+.smallButton{
+    font-size: .8em;
+    padding: .5% 5% .5% 5%;
+    margin-left: 43%;
+    margin-top: 8%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
 }
-.largeButton{
-    font-size: 1.2em;
-    padding: 1% 10% 1% 10%;
+.smallButtonBrowse{
+    font-size: 1em;
+    padding: .5% 6% .5% 6%;
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
+    display: inline;
+}
+.smallButtonClose{
+    font-size: 1em;
+    padding: .5% 4% .5% 4%;
+    margin-top: 2%;
+    margin-left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
+    display: inline;
+}
+.twoButtons{
+    padding-top: 3.5%;
+    padding-left: .3%;
+
+    width: 32%;
+    float: right;
+}
+.fileHide{
+    margin-left: 2%;
+    width: 90%;
+    margin-top: 6%;
+    /*opacity: 0;*/
+}
+/*.smallButtonFile{*/
+    /*font-size: .8em;*/
+    /*padding: 0% 0% 0% 0%;*/
+    /*margin-left: 2%;*/
+    /*width: 16%;*/
+    /*margin-top: 8%;*/
+    /*color: white;*/
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    /*cursor: pointer;*/
+    /*border:0;*/
+    /*font-family: "BebasNeue";*/
+
+/*}*/
+
+.smallButtonProfile{
+    font-size: 1.1em;
+    padding: .5% 5% .5% 5%;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
+}
+.smallButtonDelete{ font-size: 1.1em;
+    padding: .5% 5% .5% 5%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
+    float: left;
+    /*margin-top: 20px;*/
+    float: right;
+}
+
+.deleteShow{
+    margin-left: 40%;
+    height: 18px;
+    width: 35%;
+    margin-top: .6%;
+}
+
+.mediumButton{
+    font-size: 1.5em;
+    padding: .5% 10% .5% 10%;
     margin-left: 8%;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+.coolInput{
+    width: 45%;
+    height: 28px;
+    font-size: .7em;
+    margin: 6% 1% 1% 2%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+.largeButton{
+    font-size: 1em;
+    width: 110px;
+    height: 30px;
+    margin: 6% 0% 1% 15%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    float: left;
+}
+.coolestInput{
+     width: 45%;
+    height: 28px;
+    font-size: .7em;
+     margin: 6% 1% 1% 2%;
+     outline: 0;
+     border: none;
+     border-bottom: 1px solid gray;
+
+ }
+.largestButton{
+    font-size: 1em;
+    width: 180px;
+    height: 30px;
+    margin: 6% 0% 1% 10%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    float: left;
+}
+.coolInputSignup{
+    width: 45%;
+    height: 28px;
+    font-size: .7em;
+    margin: 3% 1% 1% 2%;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+
+}
+.largeButtonSignUp{
+    font-size: 1em;
+    width: 110px;
+    height: 30px;
+    margin: 3% 0% 1% 15%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    float: left;
+}
+.bottomRightCorner{
+    margin-top: 3%;
+    margin-left: 78%;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.3);
+
+}
+.bottomRightCornerSignup{
+    margin-top: 0%;
+    margin-left: 77%;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, 0.3);
+}
+.signup{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+}
+.centered{
+    padding-left: 30%;
+}
+.centeredPassword{
+    padding-left: 12%;
+
+}
+.centeredCurrent{
+    padding-left:8% ;
+}
+.centeredNew{
+    padding-left:15% ;
+
+}
+.deleteInstructions{
+    color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    float: right;
+    margin-left:20%;
+    margin-bottom: 5%;
 }
 .container{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
@@ -140,8 +458,8 @@ height: 80px;
 .resultsBackground{
     /*background-color: rgba(255, 255, 255, 0.5);*/
     text-align: center;
-    width: 90%;
-    margin-left: 5%;
+    width: 94%;
+    margin-left: 3%;
 }
 
 .menu {
@@ -160,18 +478,17 @@ height: 80px;
     width: 125px;
     height: 25px;
     float: left;
-    padding: 4px;
+    padding-top: .7%;
     margin: 3px;
     margin-top: 0px;
-
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
     cursor: pointer;
-    color: gray;
+    color: rgba(0, 0, 0, 0.3);
 }
 .filter.active{
 
-    color: darkred;
+    color: rgba(0, 0, 0, 0.6);
     /*background-color: gray;*/
 }
 
@@ -200,6 +517,8 @@ height: 80px;
     max-height: 0;
 }
 .boxExpand{
+    background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
+    background-size: 100%;
     height:635px;
     width: 950px;
     background-color: white ;
@@ -226,29 +545,18 @@ h4{
     font-weight:500;
     margin-bottom: 2%;
 }
-.description{
-    width:45%;
-    border-right: 2px solid gray;
-    float: left;
-    padding-left: 2%;
-    padding-top: 1%;
-    height: 320px;
-    overflow: scroll;
-    text-align: left;
 
-}
 .close{
    margin-right: 3.5%;
     margin-top: 0%;
+    float: right;
 }
 
 .tradeInfo{
     float: left;
-    border-top: 2px solid gray;
-    width: 98%;
-    height: 200px;
-    padding-left: 2%;
-    padding-top: 1%;
+    width: 100%;
+    height: 43%;
+    padding: 1%;
 }
 .selectTitle{
     /*display: inline;*/
@@ -267,10 +575,10 @@ h4{
 
 }
 .myItems{
-    width: 200px;
-    height:119%;
-    border: 1px solid gray;
-    background-color: lightgray;
+    width: 23%;
+    height:98%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background-color: white;
     overflow: scroll;
     float: left;
 
@@ -278,12 +586,8 @@ h4{
 
 .response{
     float: left;
-    width: 75%;
-    height: 198px;
-    margin-left: 20px;
-    border: 1px solid gray;
-    margin-top: 1%;
-    background-color: lightgray;
+    width: 100%;
+    height: 170px;
 
 }
 .userResponse{
@@ -301,57 +605,50 @@ h4{
 .userResponseBox{
     float: left;
     width: 66%;
-    height: 86%;
+    height: 83%;
     background-color: white;
-    border: 1px solid gray;
-    margin-left: 2%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     font-size: 1em;
     overflow: scroll;
     resize: none;
     overflow: scroll;
+    font-size: .7em;
 }
 .previewEmail{
     padding: 1%;
 }
 .items{
     float: left;
-    width:80px;
-    height: auto;
+    height:60px;
     border: 1px solid gray;
     background-color: white;
-    margin-left: 6%;
+    margin-left: 3%;
     margin-top: 3%;
     overflow: hidden;
 
 }
 .previewImages{
-    width: 100%;
+    height: 100%;
     vertical-align: top;
 
 }
 
 .preview{
     height: 55%;
+    min-width: 70px;
     margin-left: 2%;
-    border: 1px solid gray;
+    border: 2px solid rgba(0, 0, 0, 0.3);
     float: left;
     overflow: hidden;
     background-color: white;
+
 }
 .currentItem{
     height: 100%;
 }
-.email{
-    margin-top: 2%;
-    margin-right: 10%;
-    width: 90px;
-    height: 45px;
-    font-size: 1.4em;
-    float: right;
-}
+
 .mix{
     height: 200px;
-    border: 1px solid #3c3c3c;
     cursor: pointer;
     display: inline;
 }
@@ -365,24 +662,33 @@ h4{
 .name{
     text-align: left;
     margin-top: 2%;
+    border-bottom: 0;
+    color: rgba(0, 0, 0, 0.3);
 }
 .fullSizeImageHolder{
-    height: 309px;
-    border: 3px solid gray;
-    width: 418px;
+    height: 99%;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    width: 94%;
     overflow: hidden;
     float: right;
-    margin-right: 3%;
 
 }
 .fullSizeImage{
-    height: 309px;
+    height: 100%;
     /*margin-left: 10%;*/
 }
 .instructions{
-float: left;
-padding-left: 2%;
+    float: left;
     font-size: 1.1em;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    width: 70%;
+    height: 94%;
+    margin-left: 2%;
+    text-align: left;
+    padding-left: 3%;
+    padding-top: 1%;
+    color: rgba(0, 0, 0, 0.3);
+
 }
 .loginBox{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
@@ -390,11 +696,9 @@ padding-left: 2%;
     width: 60%;
     height:75%;
     float: left;
-    margin-left: 19%;
+    margin-left: 19.2%;
     margin-top: 6%;
-    border: 3px solid black;
 }
-
 
 .spacing{
     padding:2%;
@@ -402,14 +706,15 @@ padding-left: 2%;
 
 }
 .profileBox{
-    background-color: white;
+    background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
+    background-size: 100%;
     width: 90%;
     height:90%;
     float: left;
     margin-left: 5%;
     margin-top: 2%;
-    border: 3px solid gray;
 }
+
 .add{
     width: 60%;
     height: 87%;
@@ -428,29 +733,29 @@ padding-left: 2%;
     font-size: 1.5em;
 }
 .edit{
-width: 37%;
-    height: 59%;
+    width: 100%;
+    height: 250px;
     float: right;
     margin-right:1.5%;
-    border: 3px solid gray;
+    border: 3px solid rgba(0, 0, 0, 0.3);
     overflow: scroll;
 }
 .editHolder{
-    width: 29%;
+    height: 100px;
     border: 2px solid gray;
     float: left;
 overflow: hidden;
     margin:2%;
 }
 .editImages{
-    width: 100%;
+    height: 100%;
     vertical-align: top;
 }
 .deleteBox{
-    border: 3px solid gray;
+    border: 3px solid rgba(0, 0, 0, 0.3);
     float: right;
-    width: 37%;
-    height: 25%;
+    width: 97%;
+    height: 85px;
     margin-right:1.5%;
     margin-top: 1.5%;
     padding: 1.5%;

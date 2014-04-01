@@ -3,20 +3,26 @@
 
     <div class="background">
         <div class="loginBox">
-            <div class="row">
                 <div class="col-sm-12">
-                        <h1 class="spacing">Login</h1>
-                        <p class="spacing">Accounts are reset on server restart from <code>dummydata.js</code>. Default account is <code>test@gmail.com</code> / <code>test</code></p>
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Login_Logo_White.png" class="openingTitle">
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
+
                 </div>
-                 <div class="col-sm-12">
-                     <div class="spacing">
+                <div class="bottomDim">
+                    <div class="whiteBox">
+
                         <form class="form" name="form" ng-submit="login(form)" novalidate="">
                               <div class="form-group">
-                                <label>Email</label>
+                                  <div class="largeButton">
+
+                                  <label class="centered">Email</label>
+                                      </div>
                                       <input type="text" name="email" class="coolInput" ng-model="user.email">
                               </div>
                               <div class="form-group">
-                                    <label>Password</label>
+                                  <div class="largeButton">
+                                    <label class="centeredPassword">Password</label>
+                                      </div>
                                         <input type="password" name="password" class="coolInput" ng-model="user.password">
                               </div>
 
@@ -27,16 +33,14 @@
                                     <p class="help-block">{{ errors.other }}</p>
                               </div>
 
-                              <button type="submit" class="largeButton"> Sign in </button>
+                              <button type="submit" class="smallButton"> LOGIN </button>
                         </form>
+                        <div class="bottomRightCorner">
+                                Not registered? <a href="/signup" class="signup">SIGNUP.</a>
+                        </div>
                      </div>
-                 </div>
-            </div>
-              <div class="row"></div>
-              <div class="col-sm-12">
-                    <hr>
-                         Not registered? <a href="/signup" class="text-center new-account">Create an account.</a>
-               </div>
+                </div>
+
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 {
   "name": "swaptor",
-  "version": "0.0.0-87",
+  "version": "0.0.0-94",
   "dependencies": {
     "express": "~3.4.3",
     "lodash": "~2.4.1",

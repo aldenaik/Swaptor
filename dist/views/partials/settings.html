@@ -1,28 +1,35 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
+
     <div class="background">
         <div class="loginBox">
-            <div class="row">
-                  <div class="col-sm-12">
-                     <h1>Change Password</h1>
-                  </div>
-                  <div class="spacing">
-                      <div class="col-sm-12">
+            <div class="col-sm-12">
+                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Settings_Logo_White.png" class="openingTitle">
+                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
+
+            </div>
+            <div class="bottomDim">
+                <div class="whiteBox">
                             <form class="form" name="form" ng-submit="changePassword(form)" novalidate="">
 
                                  <div class="form-group">
-                                         <label>Current Password</label>
+                                     <div class="largestButton">
 
-                                              <input type="password" name="password" class="form-control" ng-model="user.oldPassword" mongoose-error="">
+                                        <label class="centeredCurrent">Current Password</label>
+                                     </div>
+
+                                              <input type="password" name="password" class="coolestInput" ng-model="user.oldPassword" mongoose-error="">
                                                      <p class="help-block" ng-show="form.password.$error.mongoose">
                                                           {{ errors.other }}
                                                       </p>
                                   </div>
 
                                  <div class="form-group">
-                                        <label>New Password</label>
+                                     <div class="largestButton">
 
-                                                <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword" ng-minlength="3" required="">
+                                          <label class="centeredNew">New Password</label>
+                                     </div>
+                                                <input type="password" name="newPassword" class="coolestInput" ng-model="user.newPassword" ng-minlength="3" required="">
                                                          <p class="help-block" ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
                                                                      Password must be at least 3 characters.
                                                         </p>
@@ -30,11 +37,11 @@
 
                                 <p class="help-block"> {{ message }} </p>
 
-                                    <button class="btn btn-lg btn-primary" type="submit">Save changes</button>
+                                    <button class="smallButton" type="submit">Save changes</button>
                             </form>
                       </div>
                   </div>
             </div>
         </div>
     </div>
- </div>
+ 
