@@ -155,7 +155,7 @@ AWS.config.update({ accessKeyId: 'AKIAJXEUWULMFXG57REQ', secretAccessKey: 'tctOW
 
 exports.savetradingitems = function(req, res) {
 console.log(req.user); ///where image is kept
-
+    console.log(req.body);
     fs.readFile(req.files.displayImage.path, function (err, data) {
         if (err) { throw err; }
 
@@ -189,7 +189,7 @@ console.log(req.user); ///where image is kept
                 image: "https://s3.amazonaws.com/"+req.user.id+"/"+ req.files.displayImage.originalFilename,
                 description: req.body.description,
                 want: req.body.want,
-           categories: ['all', req.body.categories],
+           categories: ['all', req.body.category],
                 email: req.user.email,
                 user: req.user.id
             });
@@ -224,7 +224,7 @@ exports.deletetradingitems = function(req, res) {
         res.redirect('/profile');         // shut down the connection pool, no more messages
     });
 
-}
+};
 
 
 

@@ -9,6 +9,7 @@
             <div class="bottomDim">
                 <div class="whiteBox">
                     <div class="left">
+                        <label class="labelTitle">Add Items to Swap</label>
                         <form action="/api/tradingitems" method="post" enctype="multipart/form-data">
 
                                 <label class="label">Title of Item:</label>
@@ -16,26 +17,53 @@
                                 <label class="label">Description:</label>
                                 <input type="text" name="description" class="inputProfile">
                             <br>
-                            <br>
-                            <br>
                                 <label class="labelLong">What are you willing to swap for?</label>
                                 <input type="text" name="want" class="inputProfileLong">
-                                <label class="labelLong">What category does it fall under?<br></label> <label class="labelSub"> (electronics, bikes, furniture, clothing)</label>
-                                <input type="text" name="categories" class="inputProfileLong">
-                            <!--<div class="smallButtonFile">Choose File-->
-                                 <input type="file" name="displayImage" class="fileHide">
-                                <input type="submit" class="smallButtonProfile">
+                                <label class="labelLong">What category does it fall under?<br></label>
+
+                            <div class="checklistBox">
+
+                                    <div id="ck-button">
+                                        <label>
+                                            <input class="hideInput" type="radio" value="electronics" name="category"><span>electronics</span>
+                                        </label>
+                                    </div>
+                                    <div id="ck-button">
+                                        <label>
+                                            <input class="hideInput" type="radio" value="bikes" name="category"><span>bikes</span>
+                                        </label>
+                                    </div>
+                                    <div id="ck-button">
+                                        <label>
+                                            <input class="hideInput" type="radio" value="furniture" name="category"><span>furniture</span>
+                                        </label>
+                                    </div>
+                                    <div id="ck-button">
+                                        <label>
+                                            <input class="hideInput" type="radio" value="clothing" name="category"><span>clothing</span>
+                                        </label>
+                                    </div>
+
+                            </div>
+
+                            <label class="labelLong">Click below to add image:<image></image></label>
+
+                            <input type="file" name="displayImage" class="fileHide">
+                                <input type="submit" class="submitButton">
+                            <!--electronics, bikes, furniture, clothing                          -->
 
                         </form>
                      </div>
                     <div class="right">
+                        <label class="labelItems">Your Collection</label>
+
                         <div class="edit">
                             <div class="editHolder" ng-repeat="item in tradingitems | filter: {user: currentUser._id}">
                                 <img src="{{item.image}}" class="editImages" ng-click="selectDeleteItem(item)">
                             </div>
                         </div>
                         <div class="deleteBox">
-                            <label class="deleteInstructions">Select an image above, and click delete, to remove the item from your stash of items to swap?</label>
+                            <label class="deleteInstructions">Select an image above, and click delete, to remove the item from your stash of items to swap.</label>
                             <div>
                                 <input class="deleteShow" value="{{currentItem.name}}" readonly="readonly">
                                 <button class="smallButtonDelete" ng-click="deleteitem(currentItem)" type="delete">Delete</button>

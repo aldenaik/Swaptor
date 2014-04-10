@@ -39,4 +39,18 @@ angular.module('swaptorApp')
             }
 
 
+//        $scope.electronics= function(){
+//            $scope.electronics = "electronics";
+//        };
+//        $scope.bikes= function(){
+//            $scope.bikes = "bikes";
+//
+//        };
+//        $scope.furniture= function(){
+//            $scope.furniture = "furniture";
+//        };
+//        $scope.clothing= function(){
+//            $scope.clothing = "clothing";
+//
+//        };
  });//////end of controller

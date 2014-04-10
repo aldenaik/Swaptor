@@ -23,11 +23,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/index.html">
+      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/controllers/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.53637904" vertical-offset="148" max-vertical-offset="1260">
+            <state line="193" column="33" selection-start="7856" selection-end="7856" vertical-scroll-proportion="-13.076923" vertical-offset="2555" max-vertical-offset="4065">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="785" column="38" selection-start="14329" selection-end="14329" vertical-scroll-proportion="-10.318182" vertical-offset="11321" max-vertical-offset="13950">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="68" column="130" selection-start="4154" selection-end="4154" vertical-scroll-proportion="1.7801048" vertical-offset="0" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="browse.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/browse.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="27" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="930">
+              <folding>
+                <marker date="1397150140000" expanded="true" signature="132:1710" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,7 +105,6 @@
         <option value="$PROJECT_DIR$/app/scripts/services/BrowseService.js" />
         <option value="$PROJECT_DIR$/dist/lib/routes.js" />
         <option value="$PROJECT_DIR$/lib/routes.js" />
-        <option value="$PROJECT_DIR$/lib/controllers/api.js" />
         <option value="$PROJECT_DIR$/app/bower_components/es5-shim/tests/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/navbar.js" />
         <option value="$PROJECT_DIR$/app/views/partials/navbar.html" />
@@ -87,12 +115,13 @@
         <option value="$PROJECT_DIR$/app/views/partials/login.html" />
         <option value="$PROJECT_DIR$/app/views/partials/signup.html" />
         <option value="$PROJECT_DIR$/app/views/partials/settings.html" />
-        <option value="$PROJECT_DIR$/app/views/partials/profile.html" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/browse.js" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/views/partials/browse.html" />
         <option value="$PROJECT_DIR$/app/views/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/browse.js" />
+        <option value="$PROJECT_DIR$/lib/controllers/api.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/profile.html" />
       </list>
     </option>
   </component>
@@ -155,7 +184,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -169,91 +198,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Swaptor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -586,19 +531,11 @@
         <state line="65" column="61" selection-start="4409" selection-end="4420" vertical-scroll-proportion="-40.625" vertical-offset="0" max-vertical-offset="1200" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/controllers/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="28" selection-start="5132" selection-end="5137" vertical-scroll-proportion="2.878049" vertical-offset="15" max-vertical-offset="4065" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="82" selection-start="789" selection-end="801" vertical-scroll-proportion="0.34035656" vertical-offset="0" max-vertical-offset="840" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="18" selection-start="757" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320" />
+        <state line="30" column="18" selection-start="757" selection-end="789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/public/favicon.ico">
@@ -606,24 +543,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="16" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.12324493" vertical-offset="2336" max-vertical-offset="12780" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/BrowseService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="6" selection-start="1339" selection-end="1342" vertical-scroll-proportion="1.146789" vertical-offset="0" max-vertical-offset="1350" />
+        <state line="50" column="6" selection-start="1339" selection-end="1342" vertical-scroll-proportion="1.146789" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/lib/config/express.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="27" selection-start="927" selection-end="934" vertical-scroll-proportion="0.025993884" vertical-offset="448" max-vertical-offset="1125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/browse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="58" selection-start="313" selection-end="313" vertical-scroll-proportion="0.17766498" vertical-offset="0" max-vertical-offset="1530" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
@@ -636,14 +565,46 @@
         <state line="96" column="17" selection-start="2479" selection-end="2490" vertical-scroll-proportion="0.5412844" vertical-offset="1086" max-vertical-offset="1740" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/browse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.4149766" vertical-offset="49" max-vertical-offset="720" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.53637904" vertical-offset="148" max-vertical-offset="1260">
+        <state line="31" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.78680205" vertical-offset="0" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/browse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="87" selection-start="4238" selection-end="4247" vertical-scroll-proportion="0.5105348" vertical-offset="720" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/browse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="27" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="930">
+          <folding>
+            <marker date="1397150140000" expanded="true" signature="132:1710" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/controllers/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="33" selection-start="7856" selection-end="7856" vertical-scroll-proportion="-13.076923" vertical-offset="2555" max-vertical-offset="4065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="785" column="38" selection-start="14329" selection-end="14329" vertical-scroll-proportion="-10.318182" vertical-offset="11321" max-vertical-offset="13950">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="130" selection-start="4154" selection-end="4154" vertical-scroll-proportion="1.7801048" vertical-offset="0" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
