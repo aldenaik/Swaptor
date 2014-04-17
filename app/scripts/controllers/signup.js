@@ -12,7 +12,8 @@ angular.module('swaptorApp')
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
-          password: $scope.user.password
+            zipcode: $scope.user.zipcode,
+            password: $scope.user.password
         })
         .then( function() {
           // Account created, redirect to home
