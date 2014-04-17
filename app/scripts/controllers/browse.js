@@ -1,14 +1,16 @@
 'use strict';
 
 angular.module('swaptorApp')
-  .controller('BrowseCtrl', function ($scope, $http, tradingitems, Auth, BrowseService) {
+  .controller('BrowseCtrl', function ($scope, $http, tradingitems, $location, Auth, BrowseService) {
 
              $scope.tradingitems = tradingitems;
 
              $scope.currentUser = Auth.currentUser();
 //            console.log($scope.currentUser);
 
-
+        $scope.go = function (browse) {
+            $location.path( "/browse" );
+        }
 
             $scope.refreshItems= function(){
             $scope.tradingitems=BrowseService.tradingitems();

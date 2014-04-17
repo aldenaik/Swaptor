@@ -272,8 +272,8 @@ height: 80px;
     background-repeat: no-repeat;
     background-size:101%;
     margin: 0;
-    /*width: 82px;*/
-    height: 105%;
+cursor: pointer;
+height: 105%;
 }
 
 
@@ -526,13 +526,13 @@ height: 80px;
 .main {
     background-color: rgba(255, 255, 255, 0.75);
     width:100%;
-    height:575px;
+    height:530px;
     overflow: scroll;
 
 
 }
 .dim{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.4);
     height:101%;
     width: 100%;
     /*display: none;*/
@@ -560,6 +560,7 @@ height: 80px;
     left: 0;
     right: 0;
     top: 6%;
+    cursor: default;
 }
 .hidden .boxExpand{
     display: none;
@@ -656,7 +657,7 @@ h4{
     margin-left: 3%;
     margin-top: 3%;
     overflow: hidden;
-
+    cursor: pointer;
 }
 .previewImages{
     height: 100%;
@@ -729,6 +730,7 @@ h4{
     float: left;
     margin-left: 19.2%;
     margin-top: 6%;
+    cursor: default;
 }
 
 .spacing{
@@ -744,6 +746,7 @@ h4{
     float: left;
     margin-left: 5%;
     margin-top: 2%;
+    cursor: default;
 }
 
 
@@ -839,6 +842,7 @@ overflow: hidden;
 .editImages{
     height: 100%;
     vertical-align: top;
+    cursor: pointer;
 }
 .deleteBox{
     border: 3px solid rgba(0, 0, 0, 0.3);

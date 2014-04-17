@@ -1,8 +1,12 @@
 'use strict';
 
 angular.module('swaptorApp')
-  .controller('SettingsCtrl', function ($scope, User, Auth) {
+  .controller('SettingsCtrl', function ($scope, $location, User, Auth) {
     $scope.errors = {};
+
+        $scope.go = function (browse) {
+            $location.path( "/browse" );
+        }
 
     $scope.changePassword = function(form) {
       $scope.submitted = true;

@@ -1,8 +1,8 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
 
-    <div class="background">
-        <div class="loginBox">
+    <div class="background"ng-click="go('/browse')">
+        <div class="loginBox"ng-click="$event.stopPropagation()">
             <div class="col-sm-12">
                 <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Settings_Logo_White.png" class="openingTitle">
                 <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
