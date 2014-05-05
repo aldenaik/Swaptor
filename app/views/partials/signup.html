@@ -1,3 +1,5 @@
+<body ng-app>
+
 <div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
 
@@ -67,11 +69,16 @@
                                 <div class="form-group" ng-class="{ 'has-success': form.zipcode.$valid && submitted,
                                                           'has-error': form.zipcode.$invalid && submitted }">
                                     <div class="largeButtonSignUp">
-
                                         <label class="centeredZip">Zipcode</label>
                                     </div>
+
                                     <input type="text" name="zipcode" class="coolInputSignup" ng-model="user.zipcode"
                                            required/>
+
+                                    <!--<input type="text" name="lat" ng-model="user.lat"value="123">-->
+                                    <!--<input type="text" name="lon" ng-model="user.lon"value="987">-->
+
+
                                     <p class="help-block" ng-show="form.zipcode.$error.required && submitted">
                                         A zipcode is required
                                     </p>
@@ -86,3 +93,4 @@
         </div>
     </div>
 </div>
+</body>

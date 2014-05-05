@@ -13,6 +13,9 @@ var tradingitemsSchema = new Schema({
     want: String,
     categories: Array,
     email: String,
+    zipcode: Number,
+    lat: Number,
+    lon: Number,
     user: String
 
 });

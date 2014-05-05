@@ -33,14 +33,14 @@ background-color: black;
 }
 .fullWidthHeighth{
     width: 100%;
-    height: 80%;
+    height: 100%;
     position: absolute;
 }
 .header {
     /*background-color: black;*/
-    width:100%;
-    height:110px;
+    height:105px;
     padding-left: 10px;
+    /*float: left;*/
 }
 .logo{
     height: 90px;
@@ -72,7 +72,6 @@ height: 80px;
     margin-top: 2%;
     margin-left: 25%;
     opacity: .75;
-
 }
 .browseLogo{
     position: absolute;
@@ -242,7 +241,7 @@ height: 80px;
     padding-top: 14%;
     text-align: center;
     font-size: 1.5em;
-    color: rgba(0, 0, 0, 0.3)
+    color: rgba(0, 0, 0, 0.3);
 }
 .form{
     width: 70%;
@@ -270,10 +269,10 @@ height: 80px;
 .background{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/BackgroundItems.jpg');
     background-repeat: no-repeat;
-    background-size:101%;
+    background-size:100%;
     margin: 0;
-cursor: pointer;
-height: 105%;
+    cursor: pointer;
+    height: 84.5%;
 }
 
 
@@ -479,6 +478,7 @@ height: 105%;
 .container{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
     background-size: 100%;
+    height: 100%;
 
 }
 #Container .mix{
@@ -726,9 +726,9 @@ h4{
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
     background-size: 100%;
     width: 60%;
-    height:75%;
+    height:73%;
     float: left;
-    margin-left: 19.2%;
+    margin-left: 21%;
     margin-top: 6%;
     cursor: default;
 }
@@ -867,60 +867,86 @@ overflow: hidden;
 /*////////////////////////// Bootstrap CSS///////////////*/
 /* Everything but the jumbotron gets side spacing for mobile first views */
 /*.header,*/
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-/*.header {*/
-  /*border-bottom: 1px solid #e5e5e5;*/
-}
-/* Make the masthead heading the same height as the navigation */
-/*.header h3 {*/
-  /*margin-top: 0;*/
-  /*margin-bottom: 0;*/
-  /*line-height: 40px;*/
-  /*padding-bottom: 19px;*/
-/*}*/
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
 
 /* Customize container */
-@media (min-width: 768px) {
-  .container {
-  }
+@media (max-width: 768px) {
+.header {
+    /*background-color: black;*/
+    height:80px;
+    padding-left: 10px;
 }
-.container-narrow > hr {
-  margin: 30px 0;
+    .logo{
+        height: 65px;
+        margin-top:1% ;
+        margin-left:.8% ;
+    }
+.title{
+    height: 50px;
+    margin-top:3.5% ;
+    margin-left:1.5% ;
 }
+    .background{
+        background-size:125%;
+        height: 84.2%;
+        margin-left: -40px;
+    }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    .intro{
+        margin-left: 13%;
+        width: 77%;
+        padding-top: 10%;
+    font-size: 1.2em;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    .openingTitle{
+        height: 40px;
+        margin-top:3% ;
+        margin-right:3% ;
+        float: right;
+    }
+.loginBox{
+    width: 70%;
+    margin-left:18%;
 }
+.openingLogo{
+    height: 60px;
+    margin-left: 33%;
+    opacity: .75;
+}
+.buttonBox{
+    width: 50%;
+    margin-left: 22%;
+}
+.form{
+    padding-top: 5%;
+    font-size: 1.2em;
+    line-height: 100%;
+}
+    .largeButton{
+        font-size: 1em;
+        width: 80px;
+        height: 24px;
+        line-height: 25px;
+    }
+    .coolInput{
+        width: 50%;
+        height: 20px;
+        font-size: .7em;
+    }
+    .smallButton{
+        font-size: 1.2em;
+        margin-left: 48%;
+    }
+    .bottomRightCorner{
+        margin-top: 4%;
+        margin-left: 77%;
+        font-size: .9em;
+        color: rgba(0, 0, 0, 0.3);
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 481px) {
   /* Remove the padding we set earlier */
   /*.header,*/
   .marketing,

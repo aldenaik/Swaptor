@@ -4,17 +4,41 @@ angular.module('swaptorApp')
   .controller('SignupCtrl', function ($scope, Auth, $location) {
     $scope.user = {};
     $scope.errors = {};
+//        $scope.youKnow = function () {
+//            alert('yes');
+//        };
+//        $scope.youKnow= function(){
+//
+//            navigator.geolocation.getCurrentPosition(
+//                function(position) {
+//                    $scope.lat = position.coords.latitude;
+//                    $scope.lon = position.coords.longitude;
+////                    console.log($scope.lat, $scope.lon);
+//                }
+//            )
+//
+//        };
 
     $scope.register = function(form) {
       $scope.submitted = true;
-  
+
       if(form.$valid) {
+//          navigator.geolocation.getCurrentPosition(
+//              function(position) {
+//                  $scope.user.lat = position.coords.latitude;
+//                  $scope.user.lon = position.coords.longitude;
+//                  console.log($scope.user.lat, $scope.user.lon);
+//              }
+//          )
         Auth.createUser({
           name: $scope.user.name,
           email: $scope.user.email,
-            zipcode: $scope.user.zipcode,
-            password: $scope.user.password
+          password: $scope.user.password,
+            zipcode:$scope.user.zipcode
+//            lat: $scope.user.lat,
+//            lon: $scope.user.lon
         })
+
         .then( function() {
           // Account created, redirect to home
           $location.path('/browse');

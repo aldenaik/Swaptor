@@ -5,6 +5,8 @@ angular.module('swaptorApp')
     $scope.user = {};
     $scope.errors = {};
 
+
+
     $scope.login = function(form) {
       $scope.submitted = true;
       

@@ -32,11 +32,8 @@ angular.module('swaptorApp', [
             resolve:{
                 tradingitems: function(BrowseService){
                     return BrowseService.tradingitems();
-                  },
-
-
-
-        }
+                  }
+             }
         })
         .when('/profile', {
             templateUrl: 'partials/profile',

@@ -191,8 +191,12 @@ console.log(req.user); ///where image is kept
                 want: req.body.want,
            categories: ['all', req.body.category],
                 email: req.user.email,
+                zipcode: req.user.zipcode,
                 user: req.user.id
             });
+    console.log(req.user.zipcode);
+    console.log(req.user);
+
 
     console.log("created categories:", newtradingitems.categories);
 

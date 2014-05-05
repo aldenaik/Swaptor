@@ -20,9 +20,9 @@
 
             <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingitems">
                 <img src="{{item.image}}" class="previewImage" ng-mousedown="save(item)" ng-mouseup="openItem = ! openItem()">
-                    <div class="dim" ng-class="{ 'hidden': ! openItem }">
+                    <div class="dim" ng-class="{ 'hidden': ! openItem }" ng-mouseup="openItem = ! openItem">
 
-                        <div class="boxExpand">
+                        <div class="boxExpand" ng-click="openItem = ! openItem">
                             <div class="col-sm-12">
                                 <img src="https://s3-us-west-2.amazonaws.com/tradeitems/LetsSwap_Logo_White.png" class="browseTitle">
                                 <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="browseLogo">

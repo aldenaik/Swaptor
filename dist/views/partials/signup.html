@@ -10,7 +10,7 @@
             </div>
             <div class="bottomDim">
                 <div class="whiteBox">
-                            <form class="form" name="form" ng-submit="register(form)" novalidate="">
+                            <form class="formSignIn" name="form" ng-submit="register(form)" novalidate="">
 
                                  <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
                                                           'has-error': form.name.$invalid && submitted }">
@@ -56,6 +56,18 @@
                                                             {{ errors.password }}
                                                      </p>
                                    </div>
+
+                                <div class="form-group" ng-class="{ 'has-success': form.zipcode.$valid && submitted,
+                                                          'has-error': form.zipcode.$invalid && submitted }">
+                                    <div class="largeButtonSignUp">
+
+                                        <label class="centeredZip">Zipcode</label>
+                                    </div>
+                                    <input type="text" name="zipcode" class="coolInputSignup" ng-model="user.zipcode" required="">
+                                    <p class="help-block" ng-show="form.zipcode.$error.required && submitted">
+                                        A zipcode is required
+                                    </p>
+                                </div>
                                    <button class="smallButton" type="submit">Sign up</button>
                             </form>
                             <div class="bottomRightCornerSignup">

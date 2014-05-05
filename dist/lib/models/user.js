@@ -12,6 +12,9 @@ var authTypes = ['github', 'twitter', 'facebook', 'google'];
 var UserSchema = new Schema({
   name: String,
   email: String,
+  zipcode: Number,
+    lat:Number,
+    lon:Number,
   role: {
     type: String,
     default: 'user'
@@ -46,7 +49,8 @@ UserSchema
     return {
       'name': this.name,
       'role': this.role,
-      'email': this.email,
+        'zipcode': this.zipcode,
+        'email': this.email,
         'provider': this.provider
     };
   });
@@ -57,7 +61,8 @@ UserSchema
   .get(function() {
     return {
       'name': this.name,
-      'role': this.role
+        'zipcode': this.zipcode,
+        'role': this.role
     };
   });
     
