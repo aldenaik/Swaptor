@@ -1,4 +1,7 @@
 <body>
+
+<div class="fullWidthHeighth">
+    <div class ="container">
     <div ng-include="'partials/navbar'"></div>
 
     <div class="menu">
@@ -11,85 +14,85 @@
         </div>
     </div>
 
-<div class="main">
-    <div id="Container" sd-mix-it-up="tradingitems">
+        <div class="main">
+            <div id="Container" sd-mix-it-up="tradingitems">
 
 
-       <div class="resultsBackground">
+               <div class="resultsBackground">
 
-            <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingitems">
-                <img src="{{item.image}}" class="previewImage"ng-mousedown="save(item)" ng-mouseup="openItem = ! openItem()">
-                    <div class="dim"ng-class="{ 'hidden': ! openItem }"ng-mouseup="openItem = ! openItem">
+                    <div class="mix" ng-class="item.categories" data-myorder="{{$index}}" ng-repeat="item in tradingitems">
+                        <img src="{{item.image}}" class="previewImage"ng-mousedown="save(item)" ng-mouseup="openItem = ! openItem()">
+                            <div class="dim"ng-class="{ 'hidden': ! openItem }"ng-mouseup="openItem = ! openItem">
 
-                        <div class="boxExpand" ng-click="openItem = ! openItem">
-                            <div class="col-sm-12">
-                                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/LetsSwap_Logo_White.png" class="browseTitle">
-                                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="browseLogo">
-                            </div>
-                            <div class="bottomDim">
-                                <div class="whiteBoxBrowse">
-                                    <div class="leftBrowse">
-
-                                        <div class="labelBrowseTitle">{{item.name}}</div>
-                                        <div class='labelBrowse'>Description of item:</div>
-                                            <input class="inputBrowse"value="{{item.description}}" readonly>
-                                        <div class='labelBrowse'>What is this Swapper looking for?</div>
-                                        <input class="inputBrowse"value="{{item.want}}" readonly>
-
+                                <div class="boxExpand" ng-click="openItem = ! openItem">
+                                    <div class="col-sm-12">
+                                        <img src="https://s3-us-west-2.amazonaws.com/tradeitems/LetsSwap_Logo_White.png" class="browseTitle">
+                                        <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="browseLogo">
                                     </div>
+                                    <div class="bottomDim">
+                                        <div class="whiteBoxBrowse">
+                                            <div class="leftBrowse">
 
-                                    <div class="rightBrowse">
-                                        <div class="fullSizeImageHolder">
-                                            <img src="{{item.image}}"class="fullSizeImage">
-                                        </div>
-                                    </div>
+                                                <div class="labelBrowseTitle">{{item.name}}</div>
+                                                <div class='labelBrowse'>Description of item:</div>
+                                                    <input class="inputBrowse"value="{{item.description}}" readonly>
+                                                <div class='labelBrowse'>What is this Swapper looking for?</div>
+                                                <input class="inputBrowse"value="{{item.want}}" readonly>
 
-                                    <div class="tradeInfo">
-                                        <div class="myItems">
-                                            <div class="items" ng-repeat="assoc_item in tradingitems | filter: {user: currentUser._id}" >
-                                                <img src="{{assoc_item.image}}"class="previewImages"ng-click="selectItem(assoc_item)">
                                             </div>
 
-                                        </div>
-
-                                        <div class="instructions">
-                                            Click an item to the left to select an item to swap.
-                                            <form id="contact-form" action="api/email" method="POST">
-
-                                                <div class="response">
-                                                    <div class="previewEmail"></div>
-                                                    <div class="userResponseBox">
-                                                        <textarea class="userResponse" type="text" name="message"> {{testEmail}}</textarea>
-                                                    </div>
-                                                        <div class="preview">
-                                                            <img src="{{currentItems.image}}" type ="text" class="currentItem" name="image">
-                                                        </div>
-                                                                <input class="hideInput" type="text" name="image"value="{{currentItems.image}}">
-                                                                <input class="hideInput" type="text" name="hostImage"value="{{item.image}}">
-                                                                <input class="hideInput" type="text" name="email" value="{{item.email}}">
-                                                                <input class="hideInput" type="text" name="subject" value="Proposed {{item.name}} Swap">
-                                                    <div class="twoButtons">
-                                                        <button type="submit" class="smallButtonBrowse">email</button>
-                                                        <input type="button" value="Finished Looking" ng-click="openItem = ! openItem"class="smallButtonClose">
-                                                    </div>
+                                            <div class="rightBrowse">
+                                                <div class="fullSizeImageHolder">
+                                                    <img src="{{item.image}}"class="fullSizeImage">
                                                 </div>
-                                            </form>
+                                            </div>
 
+                                            <div class="tradeInfo">
+                                                <div class="myItems">
+                                                    <div class="items" ng-repeat="assoc_item in tradingitems | filter: {user: currentUser._id}" >
+                                                        <img src="{{assoc_item.image}}"class="previewImages"ng-click="selectItem(assoc_item)">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="instructions">
+                                                    Click an item to the left to select an item to swap.
+                                                    <form id="contact-form" action="api/email" method="POST">
+
+                                                        <div class="response">
+                                                            <div class="previewEmail"></div>
+                                                            <div class="userResponseBox">
+                                                                <textarea class="userResponse" type="text" name="message"> {{testEmail}}</textarea>
+                                                            </div>
+                                                                <div class="preview">
+                                                                    <img src="{{currentItems.image}}" type ="text" class="currentItem" name="image">
+                                                                </div>
+                                                                        <input class="hideInput" type="text" name="image"value="{{currentItems.image}}">
+                                                                        <input class="hideInput" type="text" name="hostImage"value="{{item.image}}">
+                                                                        <input class="hideInput" type="text" name="email" value="{{item.email}}">
+                                                                        <input class="hideInput" type="text" name="subject" value="Proposed {{item.name}} Swap">
+                                                            <div class="twoButtons">
+                                                                <button type="submit" class="smallButtonBrowse">email</button>
+                                                                <input type="button" value="Finished Looking" ng-click="openItem = ! openItem"class="smallButtonClose">
+                                                            </div>
+                                                        </div>
+                                                    </form>
+
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
-
-                        </div>
                     </div>
+               </div>
+
+
+
             </div>
-       </div>
 
-
-
+        </div>
     </div>
-
 </div>
-
-
 
 </body>

@@ -83,7 +83,7 @@ height: 80px;
 }
 .browseTitle{
     height: 65px;
-    margin-top:4% ;
+    margin-top:4.5% ;
     margin-right:3% ;
     float: right;
 }
@@ -132,8 +132,6 @@ height: 80px;
     margin-bottom: 6%;
     display: inline-block;
     border-bottom: 3px solid lightgray;
-
-
 }
 .labelItems{
     color: rgba(0, 0, 0, 0.3);
@@ -141,8 +139,6 @@ height: 80px;
     margin-left: 0%;
     margin-bottom: 1%;
     display: inline-block;
-
-
 }
 .labelLong{
     color: rgba(0, 0, 0, 0.3);
@@ -174,8 +170,6 @@ height: 80px;
     float: left;
     margin-top: 10%;
     margin-left: 4%;
-
-
 }
 .inputProfile{
     width: 60%;
@@ -185,6 +179,7 @@ height: 80px;
     outline: 0;
     border: none;
     border-bottom: 1px solid gray;
+    border-radius: 0;
 }
 .inputProfileLong{
     width: 88%;
@@ -194,6 +189,7 @@ height: 80px;
     outline: 0;
     border: none;
     border-bottom: 1px solid gray;
+    border-radius: 0;
 
 }
 .inputBrowse{
@@ -206,7 +202,7 @@ height: 80px;
     float: left;
     margin-left: 4%;
     margin-top: 2%;
-
+border-radius: 0;
 }
 
 .bottomDim{
@@ -287,6 +283,17 @@ height: 80px;
     border:0;
     font-family: "BebasNeue";
 }
+.smallButtonSignUp{
+    font-size: .8em;
+    padding: .5% 5% .5% 5%;
+    margin-left: 43%;
+    margin-top: 6%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border:0;
+    font-family: "BebasNeue";
+}
 .smallButtonBrowse{
     font-size: 1em;
     padding: .5% 6% .5% 6%;
@@ -298,6 +305,8 @@ height: 80px;
     border:0;
     font-family: "BebasNeue";
     display: inline;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 .smallButtonClose{
     font-size: 1em;
@@ -310,6 +319,8 @@ height: 80px;
     border:0;
     font-family: "BebasNeue";
     display: inline;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 .twoButtons{
     padding-top: 3.5%;
@@ -338,7 +349,6 @@ height: 80px;
 .submitButton{
     font-size: 1.1em;
     padding: .5% 5% .5% 5%;
-    margin-left: 2%;
     margin-top: 1%;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
@@ -346,6 +356,9 @@ height: 80px;
     border:0;
     font-family: "BebasNeue";
     float: right;
+    -webkit-appearance: none;
+    border-radius: 0;
+
 }
 .smallButtonDelete{ font-size: 1.1em;
     padding: .5% 5% .5% 5%;
@@ -364,6 +377,8 @@ height: 80px;
     height: 18px;
     width: 35%;
     margin-top: .6%;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .mediumButton{
@@ -402,6 +417,7 @@ height: 80px;
      outline: 0;
      border: none;
      border-bottom: 1px solid gray;
+    border-radius: 0;
 
  }
 .largestButton{
@@ -439,8 +455,8 @@ height: 80px;
     margin-left: 78%;
     font-size: 1.2em;
     color: rgba(0, 0, 0, 0.3);
-
 }
+
 .bottomRightCornerSignup{
     margin-top: 0%;
     margin-left: 77%;
@@ -479,6 +495,8 @@ height: 80px;
     background-image:url('https://s3-us-west-2.amazonaws.com/tradeitems/background.jpg');
     background-size: 100%;
     height: 100%;
+    /*background-attachment:fixed;*/
+    overflow: scroll;
 
 }
 #Container .mix{
@@ -623,12 +641,15 @@ h4{
 
 }
 .userResponse{
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 95%;
     font-size: 1em;
     overflow: scroll;
     resize: none;
     overflow: scroll;
+    border-radius: 0;
+    border: 0;
+
     /*display: none;*/
 }
 /*.userResponse.hidden{*/
@@ -645,6 +666,8 @@ h4{
     resize: none;
     overflow: scroll;
     font-size: .7em;
+    border-radius: 0;
+
 }
 .previewEmail{
     padding: 1%;
@@ -870,6 +893,9 @@ overflow: hidden;
 
 /* Customize container */
 @media (max-width: 768px) {
+    .main{
+        height: 384px;
+    }
 .header {
     /*background-color: black;*/
     height:80px;
@@ -931,19 +957,216 @@ overflow: hidden;
         width: 50%;
         height: 20px;
         font-size: .7em;
+        border-radius: 0;
+
     }
     .smallButton{
-        font-size: 1.2em;
+        font-size: 1.1em;
         margin-left: 48%;
+        margin-top: 10%;
+
     }
     .bottomRightCorner{
         margin-top: 4%;
-        margin-left: 77%;
-        font-size: .9em;
-        color: rgba(0, 0, 0, 0.3);
+        margin-left: 80%;
+        font-size: .8em;
 
     }
+
+    .largeButtonSignUp{
+        font-size: .7em;
+        width: 80px;
+        height: 23px;
+        margin: 2% 0% 1% 15%;
+        line-height: 150%;
+
+    }
+    .coolInputSignup{
+        width: 50%;
+        height: 20px;
+        font-size: .6em;
+        margin: 0% 0% 0% 3%;
+        border-radius: 0;
+    }
+
+.centeredPassword{
+    padding-left: 17%;
 }
+    .bottomRightCornerSignup{
+        font-size: .8em;
+        margin-top: 2%;
+        margin-left: 80%;
+
+    }
+    .filter{
+        width: 80px;
+        height: 18px;
+        padding-top: .7%;
+        margin: 3px;
+        margin-top: 0px;
+        font-size: .9em;
+        text-align: center;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    .mix{
+        height: 135px;
+        cursor: pointer;
+        display: inline;
+    }
+    .boxExpand{
+        height:465px;
+        width: 650px;
+        background-color: white ;
+        border: 4px solid gray;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 6%;
+        cursor: default;
+    }
+    .browseTitle{
+        height: 48px;
+        margin-top:5% ;
+        margin-right:3% ;
+        float: right;
+    }
+    .browseLogo{
+        position: absolute;
+        height: 70px;
+        margin-top: 6%;
+        margin-left: 10%;
+        opacity: .75;
+
+    }
+.items{
+    float: left;
+    height:40px;
+    border: 1px solid gray;
+    background-color: white;
+    margin-left: 3%;
+    margin-top: 3%;
+    overflow: hidden;
+    cursor: pointer;
+}
+    .userResponseBox{
+        height: 63%;
+        border-radius: 0;
+    }
+    .userResponse{
+        border-radius: 0;
+    }
+    .preview{
+        height: 35%;
+    }
+    .smallButtonClose{
+        font-size: .8em;
+        padding: 3% 4% 3% 4%;
+        margin-left: 0%;
+
+    }
+     .smallButtonBrowse{
+        font-size: .8em;
+        padding: 3% 4% 3% 4%;
+        margin-left: 0%;
+    }
+    .labelBrowseTitle{
+        font-size: 1.5em;
+        width: 85%;
+
+    }
+    .labelBrowse{
+
+        margin-top: 5%;
+    }
+    .largestButton{
+        width: 130px;
+    }
+    .centeredCurrent{
+        padding-left:6%;
+        line-height: 170%;
+    }
+    .centeredNew{
+        line-height: 170%;
+    }
+    .profileBox{
+        margin-left: 7.5%;
+    }
+    .edit{
+        width: 100%;
+        height: 170px;
+        float: right;
+        margin-right:1.5%;
+        border: 3px solid rgba(0, 0, 0, 0.3);
+        overflow: scroll;
+    }
+    .profileLogo{
+        height: 65px;
+        margin-top: 3%;
+        margin-left: 42%;
+
+    }
+    .labelItems{
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 1.1em;
+        margin-left: 0%;
+        margin-bottom: 1%;
+        display: inline-block;
+    }
+    .deleteShow{
+    margin-left: 30%;
+    height: 18px;
+    width: 35%;
+    margin-top: .6%;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+    .deleteInstructions{
+        font-size: .9em;
+        margin-left:10%;
+    }
+    .editHolder{
+        height: 70px;
+        border: 2px solid gray;
+        float: left;
+        overflow: hidden;
+        margin:2%;
+    }
+    .profileTitle{
+        height: 53px;
+        margin-top:2.4% ;
+
+    }
+    .labelTitle{
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 1.3em;
+    }
+    .label{
+        font-size: 1em;
+    }
+    .labelLong{
+        font-size: 1em;
+    }
+    .inputProfile{
+        height: 10px;
+        font-size: .7em;
+    }
+    .inputProfileLong{
+        height: 10px;
+        font-size: .7em;
+    }
+    #ck-button {
+        font-size: .9em;
+        width: 20%;
+    }
+
+
+}
+
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 481px) {

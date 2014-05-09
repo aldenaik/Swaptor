@@ -1,50 +1,53 @@
-<div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
+    <div class="container">
 
-    <div class="background"ng-click="go('/browse')">
-        <div class="loginBox"ng-click="$event.stopPropagation()">
-            <div class="col-sm-12">
-                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Settings_Logo_White.png" class="openingTitle">
-                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
+        <div ng-include="'partials/navbar.html'"></div>
 
-            </div>
-            <div class="bottomDim">
-                <div class="whiteBox">
-                            <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
+        <div class="background"ng-click="go('/browse')">
+            <div class="loginBox"ng-click="$event.stopPropagation()">
+                <div class="col-sm-12">
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Settings_Logo_White.png" class="openingTitle">
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
 
-                                 <div class="form-group">
-                                     <div class="largestButton">
+                </div>
+                <div class="bottomDim">
+                    <div class="whiteBox">
+                                <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
 
-                                        <label class="centeredCurrent">Current Password</label>
+                                     <div class="form-group">
+                                         <div class="largestButton">
+
+                                            <label class="centeredCurrent">Current Password</label>
+                                         </div>
+
+                                                  <input type="password" name="password" class="coolestInput" ng-model="user.oldPassword"
+                                                   mongoose-error/>
+                                                         <p class="help-block" ng-show="form.password.$error.mongoose">
+                                                              {{ errors.other }}
+                                                          </p>
+                                      </div>
+
+                                     <div class="form-group">
+                                         <div class="largestButton">
+
+                                              <label class="centeredNew">New Password</label>
+                                         </div>
+                                                    <input type="password" name="newPassword" class="coolestInput" ng-model="user.newPassword"
+                                                         ng-minlength="3"
+                                                         required/>
+                                                             <p class="help-block"
+                                                                     ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
+                                                                         Password must be at least 3 characters.
+                                                            </p>
                                      </div>
 
-                                              <input type="password" name="password" class="coolestInput" ng-model="user.oldPassword"
-                                               mongoose-error/>
-                                                     <p class="help-block" ng-show="form.password.$error.mongoose">
-                                                          {{ errors.other }}
-                                                      </p>
-                                  </div>
+                                    <p class="help-block"> {{ message }} </p>
 
-                                 <div class="form-group">
-                                     <div class="largestButton">
-
-                                          <label class="centeredNew">New Password</label>
-                                     </div>
-                                                <input type="password" name="newPassword" class="coolestInput" ng-model="user.newPassword"
-                                                     ng-minlength="3"
-                                                     required/>
-                                                         <p class="help-block"
-                                                                 ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
-                                                                     Password must be at least 3 characters.
-                                                        </p>
-                                 </div>
-
-                                <p class="help-block"> {{ message }} </p>
-
-                                    <button class="smallButton" type="submit">Save changes</button>
-                            </form>
+                                        <button class="smallButton" type="submit">Save changes</button>
+                                </form>
+                          </div>
                       </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>
