@@ -13,9 +13,9 @@ var UserSchema = new Schema({
   name: String,
   email: String,
   zipcode: Number,
-    lat:Number,
-    lon:Number,
-  role: {
+//  lat: Number,
+//  lon: Number,
+    role: {
     type: String,
     default: 'user'
   },
@@ -50,6 +50,8 @@ UserSchema
       'name': this.name,
       'role': this.role,
         'zipcode': this.zipcode,
+//        'lat': this.lat,
+//        'lon': this.lon,
         'email': this.email,
         'provider': this.provider
     };
@@ -62,6 +64,8 @@ UserSchema
     return {
       'name': this.name,
         'zipcode': this.zipcode,
+//        'lat': this.lat,
+//        'lon': this.lon,
         'role': this.role
     };
   });

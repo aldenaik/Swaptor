@@ -52,6 +52,8 @@ User.find({});
     name: 'Test',
     email: 'test@gmail.com',
   zipcode: 94518,
+//      lat: 38,
+//     long: -122,
  password: 'test'
   }, function() {
       console.log('finished populating users');

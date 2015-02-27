@@ -1,78 +1,86 @@
-<div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
+    <div class="container">
 
-    <div class="background">
-        <div class="loginBox">
-            <div class="col-sm-12">
-                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Signup_Logo_White.png" class="openingTitle">
-                <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
+        <div ng-include="'partials/navbar.html'"></div>
 
-            </div>
-            <div class="bottomDim">
-                <div class="whiteBox">
-                            <form class="formSignIn" name="form" ng-submit="register(form)" novalidate="">
+        <div class="background">
+            <div class="loginBox">
+                <div class="col-sm-12">
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Signup_Logo_White.png" class="openingTitle">
+                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
 
-                                 <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
-                                                          'has-error': form.name.$invalid && submitted }">
-                                     <div class="largeButtonSignUp">
+                </div>
+                <div class="bottomDim">
+                    <div class="whiteBox">
+                                <form class="formSignIn" name="form" ng-submit="register(form)" novalidate="">
 
-                                             <label class="centered">Name</label>
+                                     <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
+                                                              'has-error': form.name.$invalid && submitted }">
+                                         <div class="largeButtonSignUp">
+
+                                                 <label class="centered">Name</label>
+                                         </div>
+                                            <input type="text" name="name" class="coolInputSignup" ng-model="user.name" required="">
+                                                <p class="help-block" ng-show="form.name.$error.required && submitted">
+                                                         A name is required
+                                                </p>
                                      </div>
-                                        <input type="text" name="name" class="coolInputSignup" ng-model="user.name" required="">
-                                            <p class="help-block" ng-show="form.name.$error.required && submitted">
-                                                     A name is required
-                                            </p>
-                                 </div>
 
-                                 <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
-                                                          'has-error': form.email.$invalid && submitted }">
-                                     <div class="largeButtonSignUp">
+                                     <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
+                                                              'has-error': form.email.$invalid && submitted }">
+                                         <div class="largeButtonSignUp">
 
-                                         <label class="centered">Email</label>
-                                     </div>
-                                         <input type="email" name="email" class="coolInputSignup" ng-model="user.email" required="" mongoose-error="">
-                                             <p class="help-block" ng-show="form.email.$error.email && submitted">
-                                                    Doesn't look like a valid email.
-                                              </p>
-                                            <p class="help-block" ng-show="form.email.$error.required && submitted">
-                                                    What's your email address?
-                                            </p>
-                                             <p class="help-block" ng-show="form.email.$error.mongoose">
-                                                     {{ errors.email }}
-                                             </p>
-                                  </div>
+                                             <label class="centered">Email</label>
+                                         </div>
+                                             <input type="email" name="email" class="coolInputSignup" ng-model="user.email" required="" mongoose-error="">
+                                                 <p class="help-block" ng-show="form.email.$error.email && submitted">
+                                                        Doesn't look like a valid email.
+                                                  </p>
+                                                <p class="help-block" ng-show="form.email.$error.required && submitted">
+                                                        What's your email address?
+                                                </p>
+                                                 <p class="help-block" ng-show="form.email.$error.mongoose">
+                                                         {{ errors.email }}
+                                                 </p>
+                                      </div>
 
-                                   <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
-                                                          'has-error': form.password.$invalid && submitted }">
-                                       <div class="largeButtonSignUp">
+                                       <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
+                                                              'has-error': form.password.$invalid && submitted }">
+                                           <div class="largeButtonSignUp">
 
-                                           <label class="centeredPassword">Password</label>
+                                               <label class="centeredPassword">Password</label>
+                                           </div>
+                                                 <input type="password" name="password" class="coolInputSignup" ng-model="user.password" ng-minlength="3" required="" mongoose-error="">
+                                                         <p class="help-block" ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
+                                                                  Password must be at least 3 characters.
+                                                         </p>
+                                                         <p class="help-block" ng-show="form.password.$error.mongoose">
+                                                                {{ errors.password }}
+                                                         </p>
                                        </div>
-                                             <input type="password" name="password" class="coolInputSignup" ng-model="user.password" ng-minlength="3" required="" mongoose-error="">
-                                                     <p class="help-block" ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
-                                                              Password must be at least 3 characters.
-                                                     </p>
-                                                     <p class="help-block" ng-show="form.password.$error.mongoose">
-                                                            {{ errors.password }}
-                                                     </p>
-                                   </div>
 
-                                <div class="form-group" ng-class="{ 'has-success': form.zipcode.$valid && submitted,
-                                                          'has-error': form.zipcode.$invalid && submitted }">
-                                    <div class="largeButtonSignUp">
+                                    <div class="form-group" ng-class="{ 'has-success': form.zipcode.$valid && submitted,
+                                                              'has-error': form.zipcode.$invalid && submitted }">
+                                        <div class="largeButtonSignUp">
+                                            <label class="centeredZip">Zipcode</label>
+                                        </div>
 
-                                        <label class="centeredZip">Zipcode</label>
+                                        <input type="text" name="zipcode" class="coolInputSignup" ng-model="user.zipcode" required="">
+
+                                        <!--<input type="text" name="lat" ng-model="user.lat"value="123">-->
+                                        <!--<input type="text" name="lon" ng-model="user.lon"value="987">-->
+
+
+                                        <p class="help-block" ng-show="form.zipcode.$error.required && submitted">
+                                            A zipcode is required
+                                        </p>
                                     </div>
-                                    <input type="text" name="zipcode" class="coolInputSignup" ng-model="user.zipcode" required="">
-                                    <p class="help-block" ng-show="form.zipcode.$error.required && submitted">
-                                        A zipcode is required
-                                    </p>
+                                       <button class="smallButtonSignUp" type="submit">Sign up</button>
+                                </form>
+                                <div class="bottomRightCornerSignup">
+                                    HAVE AN ACCOUNT? <a href="/login" class="signup">login</a>
                                 </div>
-                                   <button class="smallButton" type="submit">Sign up</button>
-                            </form>
-                            <div class="bottomRightCornerSignup">
-                                HAVE AN ACCOUNT? <a href="/login" class="signup">login</a>
-                            </div>
+                    </div>
                 </div>
             </div>
         </div>

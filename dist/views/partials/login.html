@@ -1,46 +1,46 @@
-<div ng-include="'partials/navbar.html'"></div>
 <div class="fullWidthHeighth">
+    <div class="container">
+    <div ng-include="'partials/navbar.html'"></div>
+        <div class="background">
+            <div class="loginBox">
+                    <div class="col-sm-12">
+                        <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Login_Logo_White.png" class="openingTitle">
+                        <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
 
-    <div class="background">
-        <div class="loginBox">
-                <div class="col-sm-12">
-                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Login_Logo_White.png" class="openingTitle">
-                    <img src="https://s3-us-west-2.amazonaws.com/tradeitems/Swaptor-Logo-Black.png" class="openingLogo">
+                    </div>
+                    <div class="bottomDim">
+                        <div class="whiteBox">
 
-                </div>
-                <div class="bottomDim">
-                    <div class="whiteBox">
+                            <form class="form" name="form" ng-submit="login(form)" novalidate="">
+                                  <div class="form-group">
+                                      <div class="largeButton">
 
-                        <form class="form" name="form" ng-submit="login(form)" novalidate="">
-                              <div class="form-group">
-                                  <div class="largeButton">
+                                      <label class="centered">Email</label>
+                                          </div>
+                                          <input type="text" name="email" class="coolInput" ng-model="user.email">
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="largeButton">
+                                        <label class="centeredPassword">Password</label>
+                                          </div>
+                                            <input type="password" name="password" class="coolInput" ng-model="user.password">
+                                  </div>
 
-                                  <label class="centered">Email</label>
-                                      </div>
-                                      <input type="text" name="email" class="coolInput" ng-model="user.email">
-                              </div>
-                              <div class="form-group">
-                                  <div class="largeButton">
-                                    <label class="centeredPassword">Password</label>
-                                      </div>
-                                        <input type="password" name="password" class="coolInput" ng-model="user.password">
-                              </div>
+                                  <div class="form-group has-error">
+                                        <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+                                            Please enter your email and password.
+                                        </p>
+                                        <p class="help-block">{{ errors.other }}</p>
+                                  </div>
 
-                              <div class="form-group has-error">
-                                    <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
-                                        Please enter your email and password.
-                                    </p>
-                                    <p class="help-block">{{ errors.other }}</p>
-                              </div>
-
-                              <button type="submit" class="smallButton"> LOGIN </button>
-                        </form>
-                        <div class="bottomRightCorner">
-                                Not registered? <a href="/signup" class="signup">SIGNUP.</a>
-                        </div>
-                     </div>
-                </div>
-
+                                  <button type="submit" class="smallButton"> LOGIN </button>
+                            </form>
+                            <div class="bottomRightCorner">
+                                    Not registered? <a href="/signup" class="signup">SIGNUP.</a>
+                            </div>
+                         </div>
+                    </div>
+            </div>
         </div>
     </div>
 </div>
